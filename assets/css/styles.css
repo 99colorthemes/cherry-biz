@@ -1,0 +1,527 @@
+.btn {
+  color: #fff;
+  padding: 0.9rem 2.2rem;
+}
+
+.btn:hover {
+  background-color: #ee043e;
+  color: #fff;
+}
+
+.btn--primary {
+  background-color: #fb2056;
+}
+
+.nnc-header {
+  padding: 1rem 0;
+  box-shadow: 0 3px 4px 0px #eee;
+  background-color: #fff;
+}
+
+.nnc-social__item {
+  fill: #444;
+  transition: all 200ms ease 0s;
+  margin-left: 1.4rem;
+  display: block;
+}
+
+.nnc-social__item:hover,
+.nnc-social__item:focus {
+  fill: #fb2056;
+  transition: all 200ms ease 0s;
+}
+
+.nnc-icon {
+  cursor: pointer;
+  display: inline-block;
+  height: 2rem;
+  vertical-align: baseline;
+  width: 2rem;
+  transition: all 200ms ease 0s;
+}
+
+.nnc-icon:hover,
+.nnc-icon:focus {
+  fill: #fb2056;
+  transition: all 200ms ease 0s;
+}
+
+.nnc-icon--sm {
+  height: 2rem;
+  width: 2rem;
+}
+
+.nnc-icon--md {
+  height: 1rem;
+  width: 1rem;
+}
+
+.nnc-icon--lg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.nnc-icon--primary {
+  fill: #fb2056;
+}
+
+.nnc-menu-icon {
+  background: none;
+  padding: 0;
+  margin-left: 1.6rem;
+}
+
+.nnc-sidenav {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: 1000;
+}
+
+.nnc-sidenav.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease-in-out;
+}
+
+.nnc-sidenav.active .nnc-sidenav__bar {
+  left: 0;
+  transition: left 300ms ease-in-out;
+}
+
+.nnc-sidenav__bar {
+  width: 460px;
+  height: 100vh;
+  position: fixed;
+  left: -460px;
+  top: 0;
+  transition: left 300ms ease-in-out;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+@media only screen and (max-width: 480px) {
+  .nnc-sidenav__bar {
+    width: 340px;
+  }
+}
+
+.nnc-sidenav__menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nnc-sidenav__menu ul li.menu-item-has-children:after {
+  right: 6px;
+  top: 16px;
+}
+
+.nnc-sidenav__menu ul li ul.sub-menu {
+  padding-left: 1rem;
+}
+
+.nnc-sidenav__menu ul li a {
+  color: #333;
+  display: block;
+  padding: 0.6rem 1rem;
+}
+
+.nnc-sidenav__menu ul li a:hover,
+.nnc-sidenav__menu ul li a:focus {
+  color: #fb2056;
+}
+
+.nnc-sidenav__menu .menu-item-has-children {
+  position: relative;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+  color: #fb2056;
+}
+
+.nnc-footer {
+  background-color: #f2f2f2;
+}
+
+.nnc-footer-bottom {
+  background-color: #fff;
+}
+
+.nnc-hero,
+.nnc-testimonial {
+  position: relative;
+}
+
+.nnc-hero .swiper-pagination-hero.swiper-pagination-clickable.swiper-pagination-bullets,
+.nnc-testimonial .swiper-pagination-hero.swiper-pagination-clickable.swiper-pagination-bullets {
+  bottom: 36px;
+  left: 0;
+  width: 100%;
+}
+
+.nnc-hero .swiper-pagination-clickable .swiper-pagination-bullet,
+.nnc-testimonial .swiper-pagination-clickable .swiper-pagination-bullet {
+  margin: 0 4px;
+  background-color: #444;
+}
+
+.nnc-hero .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.nnc-testimonial .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #fb2056;
+  width: 40px;
+  outline: none;
+  transition: all 300ms ease-in-out;
+}
+
+.nnc-hero .swiper-pagination-bullet,
+.nnc-testimonial .swiper-pagination-bullet {
+  width: 20px;
+  height: 4px;
+  border-radius: 1px;
+  transition: all 300ms ease-in-out;
+}
+
+.nnc-hero .swiper-pagination-hero,
+.nnc-testimonial .swiper-pagination-hero {
+  position: absolute;
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+
+.nnc-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  height: 80vh;
+  width: 100%;
+  position: relative;
+}
+
+.nnc-banner__info {
+  padding: 2rem;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.nnc-banner__title {
+  font-size: 1.2rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.nnc-banner__subtitle {
+  font-size: 4.6rem;
+  color: #000;
+  font-family: "Playfair Display", serif;
+}
+
+.nnc-banner__btn {
+  padding-top: 1rem;
+}
+
+.nnc-oc {
+  position: relative;
+}
+
+.nnc-oc__block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nnc-oc__item {
+  width: 100px;
+  margin: 0 1rem;
+}
+
+.nnc-oc__item img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.nnc-f {
+  padding-top: 0 !important;
+}
+
+.nnc-f__icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 500rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fb2056;
+}
+
+.nnc-f__icon > i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.nnc-f__title {
+  padding-top: 1.4rem;
+  margin: 0;
+}
+
+.nnc-f__title > a {
+  color: #000;
+}
+
+.nnc-f__content {
+  padding-top: 1rem;
+  color: #888;
+  line-height: 2;
+}
+
+.nnc-f__content p {
+  margin-bottom: 0;
+}
+
+.nnc-f .nnc-card {
+  margin-top: 2rem;
+}
+
+.nnc-f .nnc-card:first-child {
+  margin-top: 0;
+}
+
+.nnc-f .nnc-card .card-body {
+  padding: 4rem 2rem;
+}
+
+.nnc-card {
+  border: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: all 300ms ease-in-out;
+}
+
+.nnc-card:hover {
+  transform: translateY(16px);
+  transition: all 300ms ease-in-out;
+}
+
+.nnc-about {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.nnc-about__desc {
+  color: #888;
+  line-height: 2;
+}
+
+.nnc-about__desc p {
+  margin-bottom: 0;
+}
+
+.nnc-product__item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: all 300ms ease-in-out;
+}
+
+.nnc-product__item:hover {
+  transform: translateY(16px);
+  transition: all 300ms ease-in-out;
+}
+
+.nnc-product__item:hover .nnc-product__content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nnc-product__content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(251, 32, 86, 0.8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nnc-product__content h5 {
+  color: #fff;
+}
+
+.nnc-product__content span {
+  color: #fff;
+}
+
+.nnc-product__link {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 500rem;
+  background-color: #fff;
+  color: #444;
+  margin-top: 1rem;
+}
+
+.nnc-testimonial {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.nnc-testimonial__item {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem 3rem 4rem 3rem;
+}
+
+.nnc-testimonial__item i {
+  color: #eee;
+}
+
+.nnc-testimonial__content {
+  padding-top: 1.4rem;
+  color: #666;
+}
+
+.nnc-testimonial__content p {
+  margin-bottom: 1rem;
+}
+
+.nnc-testimonial__client span {
+  color: #fb2056;
+}
+
+.nnc-blog {
+  background-color: #fff;
+}
+
+.nnc-blog__title {
+  line-height: 28px;
+}
+
+.nnc-blog__title a {
+  color: #444;
+}
+
+.nnc-blog__date {
+  display: flex;
+  align-items: center;
+}
+
+.nnc-blog__date i {
+  font-size: 5px;
+  color: #ccc;
+  padding-right: 0.7rem;
+}
+
+.nnc-blog__date span {
+  padding-right: 0.7rem;
+}
+
+p {
+  line-height: 2;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1400px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+a {
+  color: #fb2056;
+  transition: all 200ms ease-in;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #fb2056;
+  text-decoration: none;
+  transition: all 200ms ease-in;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+.nnc-container {
+  max-width: 1400px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bg-none {
+  background: none;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.nnc-s-padd {
+  padding: 5.4rem 0;
+}
+
+.o-h {
+  overflow: hidden;
+}
+
+.nnc-section {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.nnc-section__title {
+  text-transform: uppercase;
+  color: #999;
+  margin: 0;
+}
+
+.nnc-section__subtitle {
+  padding-top: 0.8rem;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.nnc-icon--sm {
+  font-size: 1rem;
+}
+
+.nnc-icon--md {
+  font-size: 2rem;
+}
+
+.nnc-icon--lg {
+  font-size: 4rem;
+}
+
+.nnc-icon--xl {
+  font-size: 6rem;
+}
+
