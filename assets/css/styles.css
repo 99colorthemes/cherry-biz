@@ -12,6 +12,15 @@
   background-color: #fb2056;
 }
 
+.nnc-topbar {
+  padding: 0.6rem 0;
+  background-color: #fb2056;
+}
+
+.nnc-topbar__info ul li {
+  color: #fff;
+}
+
 .nnc-header {
   padding: 1rem 0;
   box-shadow: 0 3px 4px 0px #eee;
