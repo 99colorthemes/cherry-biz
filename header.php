@@ -38,6 +38,42 @@ if ( function_exists( 'wp_body_open' ) ) {
 
         <?php require get_template_directory() . '/search-toggle.php'; ?>
 
+        <div class="nnc-topbar">
+            <div class="nnc-container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="nnc-topbar__info">
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item pr-3">123456789</li>
+                                <li class="list-inline-item">info@web.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="sy-top-bar__info d-flex justify-content-end">
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item pr-1">
+                                    <a href="" title="facebook"><i class="fab fa-facebook text-white"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" title="instagram"><i class="fab fa-instagram text-white"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" title="twitter"><i class="fab fa-twitter text-white"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" title="youtube"><i class="fab fa-youtube text-white"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" title="google"><i class="fab fa-google text-white"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <header id="masthead" class="site-header nnc-header">
             <div class="nnc-container">
                 <div class="row align-items-center">
@@ -83,48 +119,6 @@ if ( function_exists( 'wp_body_open' ) ) {
                                     ?>
                                 </nav>
                             </div>
-
-                            <div class="d-none d-lg-block d-md-block">
-                                <div class="d-flex align-items-center h-100">
-                                    <?php if ($cherry_biz_social_link) : ?>
-                                        <div class="nnc-social d-flex l-h-0">
-                                            <?php if ($cherry_biz_facebook_link) : ?>
-                                                <a class="nnc-social__item" href="<?php echo esc_url($cherry_biz_facebook_link); ?>"
-                                                   target="_blank">
-                                                    <svg class="nnc-icon nnc-icon--md">
-                                                        <use xlink:href="#nnc-icon-fb"></use>
-                                                    </svg>
-                                                </a>
-                                            <?php endif; ?>
-                                            <?php if ($cherry_biz_twitter_link) : ?>
-                                                <a class="nnc-social__item" href="<?php echo esc_url($cherry_biz_twitter_link); ?>"
-                                                   target="_blank">
-                                                    <svg class="nnc-icon nnc-icon--md">
-                                                        <use xlink:href="#nnc-icon-tweet"></use>
-                                                    </svg>
-                                                </a>
-                                            <?php endif; ?>
-                                            <?php if ($cherry_biz_instagram_link) : ?>
-                                                <a class="nnc-social__item" href="<?php echo esc_url($cherry_biz_instagram_link); ?>"
-                                                   target="_blank">
-                                                    <svg class="nnc-icon nnc-icon--md">
-                                                        <use xlink:href="#nnc-icon-insta"></use>
-                                                    </svg>
-                                                </a>
-                                            <?php endif; ?>
-                                            <?php if ($cherry_biz_youtube_link) : ?>
-                                                <a class="nnc-social__item" href="<?php echo esc_url($cherry_biz_youtube_link); ?>"
-                                                   target="_blank">
-                                                    <svg class="nnc-icon nnc-icon--md">
-                                                        <use xlink:href="#nnc-icon-youtube"></use>
-                                                    </svg>
-                                                </a>
-                                            <?php endif; ?>
-                                        </div>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-
                             <button id="nnc-menu-icon" class="nnc-menu-icon d-lg-none d-block l-h-0">
                                 <svg class="nnc-icon nnc-icon--lg">
                                     <use xlink:href="#nnc-icon-menu"></use>
