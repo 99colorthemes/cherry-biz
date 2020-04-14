@@ -27,6 +27,10 @@
   background-color: #fff;
 }
 
+.main-navigation .current-menu-item a {
+  color: #fb2056;
+}
+
 .nnc-social__item {
   fill: #444;
   transition: all 200ms ease 0s;
@@ -210,7 +214,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -532,5 +536,9 @@ a:active {
 
 .nnc-icon--xl {
   font-size: 6rem;
+}
+
+.nnc-body {
+  margin-top: 2rem;
 }
 

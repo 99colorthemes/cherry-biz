@@ -40,35 +40,31 @@ if ( function_exists( 'wp_body_open' ) ) {
 
         <div class="nnc-topbar">
             <div class="nnc-container">
-                <div class="row justify-content-between">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="nnc-topbar__info">
-                            <ul class="list-inline m-0">
-                                <li class="list-inline-item pr-3">123456789</li>
-                                <li class="list-inline-item">info@web.com</li>
-                            </ul>
-                        </div>
+                <div class="d-flex align-items-center justify-content-center justify-content-md-between flex-column flex-md-row">
+                    <div class="nnc-topbar__info">
+                        <ul class="list-inline m-0">
+                            <li class="list-inline-item pr-3">123456789</li>
+                            <li class="list-inline-item">info@web.com</li>
+                        </ul>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="sy-top-bar__info d-flex justify-content-end">
-                            <ul class="list-inline m-0">
-                                <li class="list-inline-item pr-1">
-                                    <a href="" title="facebook"><i class="fab fa-facebook text-white"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="" title="instagram"><i class="fab fa-instagram text-white"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="" title="twitter"><i class="fab fa-twitter text-white"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="" title="youtube"><i class="fab fa-youtube text-white"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="" title="google"><i class="fab fa-google text-white"></i></a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="sy-top-bar__info d-flex justify-content-end">
+                        <ul class="list-inline m-0">
+                            <li class="list-inline-item pr-1">
+                                <a href="" title="facebook"><i class="fab fa-facebook text-white"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" title="instagram"><i class="fab fa-instagram text-white"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" title="twitter"><i class="fab fa-twitter text-white"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" title="youtube"><i class="fab fa-youtube text-white"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" title="google"><i class="fab fa-google text-white"></i></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

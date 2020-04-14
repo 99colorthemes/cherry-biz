@@ -1023,17 +1023,15 @@ object {
 }
 
 /* Extra CSS */
-.nnc-oc:before {
+.nnc-hero:after {
 	content: '';
 	background: url("https://agentcis.com/wp-content/themes/agentcis/assets/svg/features/background/triangle-bg.svg");
 	background-position: 50% calc(100% + 1px);
 	background-repeat: no-repeat;
 	background-size: 101%;
-	top: 0;
+	bottom: 0;
 	height: 100%;
 	left: 0;
 	position: absolute;
 	width: 100%;
-	z-index: 9;
-	transform: translateY(-100%);
 }

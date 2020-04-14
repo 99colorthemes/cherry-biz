@@ -25,7 +25,7 @@ get_header();
                                 <div class="nnc-banner__info">
                                     <h5 class="nnc-banner__title">Business Consultant</h5>
                                     <h2  class="nnc-banner__subtitle">Manage and Grow Your Business</span></h2>
-                                    <div class="nnc-banner__btn">
+                                     <div class="nnc-banner__btn">
                                         <a href="" class="btn btn--primary">Read More</a>
                                     </div>
                                 </div>
@@ -52,7 +52,6 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="swiper-pagination-hero"></div>
     </div>
 </section>
 
