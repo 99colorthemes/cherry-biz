@@ -1,0 +1,35 @@
+/*
+ * customizer layout animated border style
+ */
+#cherry-biz-img-container .cherry-biz-radio-img-img {
+	border: 3px solid #DEDEDE;
+	margin: 0 5px 5px 0;
+	cursor: pointer;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#cherry-biz-img-container .cherry-biz-radio-img-selected {
+	border: 3px solid #AAA;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+input[type=checkbox]:before {
+	content: '';
+	margin: -3px 0 0 -4px;
+}
+
+.cherry-biz-accordion-section-title {
+	color: #fff;
+	border-bottom: 1px solid #333;
+	border-top: 1px solid #333 ;
+	padding: 6px 10px 8px 14px ;
+	background-color: #333;
+
+
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #eee;
+	line-height: 21px;
+	margin: 0 -12px 0;
+}

@@ -280,3 +280,14 @@ if ( ! function_exists( 'cherry_biz_footer_count' ) ) :
     }
 
 endif;
+
+/**
+ * Add admin scripts and styles.
+ */
+
+function cherry_biz_admin_scripts( $hook ) {
+    if($hook == 'widgets.php') {
+        wp_enqueue_style( 'cherry-biz-admin-css', get_template_directory_uri() . '/assets/css/admin/cherry-biz-admin.css');
+    }
+}
+add_action('admin_enqueue_scripts', 'cherry_biz_admin_scripts');
