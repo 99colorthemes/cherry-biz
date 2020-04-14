@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-    <div class="sy-body">
+    <div class="nnc-body">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 col-md-12 col-sm-12">

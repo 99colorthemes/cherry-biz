@@ -17,7 +17,7 @@ $cherry_biz_sidebar = get_theme_mod('cherry_biz_homepage_sidebar', 0);
 
 get_header();
 ?>
-<div class="sy-body">
+<div class="nnc-body">
     <div class="container-fluid">
         <div class="row">
             <?php if ($cherry_biz_sidebar) : ?>
