@@ -21,7 +21,6 @@ for ($counter = 0; $counter < $length; $counter++) {
         'label'			        => esc_html__( 'Slider', 'cherry-biz' ).' '.($counter +1)
     ) ) );
 
-
     $wp_customize->add_setting( 'cherry_biz_slider_sub_title_'.$counter, array(
         'default'               => '',
         'capability'            => 'edit_theme_options',
@@ -34,15 +33,15 @@ for ($counter = 0; $counter < $length; $counter++) {
         'settings'               => 'cherry_biz_slider_sub_title_'.$counter,
     ));
 
-    $wp_customize->add_setting('cherry_biz_slider_sub_title_slide_'.$counter, array(
+    $wp_customize->add_setting('cherry_biz_slider_page_'.$counter, array(
         'capability'         => 'edit_theme_options',
-        'sanitize_callback'  => 'cherry_biz_slider_sub_title_sanitize_integer'
+        'sanitize_callback'  => 'cherry_biz_sanitize_integer'
     ) );
 
-    $wp_customize->add_control('cherry_biz_slider_sub_title_slide_'.$counter, array(
+    $wp_customize->add_control('cherry_biz_slider_page_'.$counter, array(
         'label'    => esc_html__( 'Select Page' , 'cherry-biz' ),
         'section'  => 'cherry_biz_slider_section',
-        'settings' =>  'cherry_biz_slider_sub_title_slide_'.$counter,
+        'settings' =>  'cherry_biz_slider_page_'.$counter,
         'type'     => 'dropdown-pages'
     ) );
 
