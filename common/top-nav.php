@@ -29,11 +29,11 @@ $cherry_biz_youtube_link = get_theme_mod('cherry_biz_youtube_link', '');
 
 
             <?php if($cherry_biz_search_checkbox || $cherry_biz_social_link_checkbox) : ?>
-                <div class="sy-top-bar__info d-flex justify-content-end">
+                <div class="nnc-top-bar__info d-flex justify-content-end">
                     <?php if($cherry_biz_social_link_checkbox) : ?>
                         <ul class="list-inline m-0">
                             <?php if ($cherry_biz_facebook_link) : ?>
-                                <li class="list-inline-item pr-1">
+                                <li class="list-inline-item">
                                     <a href="<?php echo esc_url($cherry_biz_facebook_link); ?>" title="facebook"><i class="fab fa-facebook text-white"></i></a>
                                 </li>
                             <?php endif; ?>
@@ -61,10 +61,8 @@ $cherry_biz_youtube_link = get_theme_mod('cherry_biz_youtube_link', '');
 
                         if($cherry_biz_search_checkbox) :
                     ?>
-                        <button role="button" class="sy-search sy-header__search p-0 bg-none l-h-0">
-                            <svg class="sy-icon sy-icon--md">
-                                <use xlink:href="#sy-icon-search"></use>
-                            </svg>
+                        <button id="nnc-search-icon" role="button" class="nnc-search--icon p-0 bg-none">
+                            <i class="fas fa-search text-white"></i>
                         </button>
                         <?php endif; ?>
                     </div>

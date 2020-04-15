@@ -6,10 +6,20 @@
 .btn:hover {
   background-color: #ee043e;
   color: #fff;
+  border: 1px solid transparent;
 }
 
 .btn--primary {
   background-color: #fb2056;
+}
+
+.btn--icon {
+  padding: 0.66rem 0.8rem;
+  margin-left: 0.3rem;
+}
+
+.btn--icon {
+  padding: 0.33rem 0.7rem;
 }
 
 .nnc-topbar {
@@ -157,6 +167,10 @@
 .main-navigation a:hover,
 .main-navigation a:focus {
   color: #fb2056;
+}
+
+.nnc-search--icon {
+  margin-left: 1.6rem;
 }
 
 .nnc-footer {

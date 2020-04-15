@@ -11,6 +11,16 @@ jQuery(document).ready(function($){
         $(this).next().toggle( "500" );
     });
 
+    // Search
+
+    $("#nnc-search-icon").click(function(){
+        $(".search-block").addClass("active");
+    });
+
+    $("#nnc-search-close").click(function(){
+        $(".search-block").removeClass("active");
+    });
+
 
     //nnc-hero-slider
     var hero_slider = new Swiper('.nnc-hero-slider-container', {

@@ -1,8 +1,6 @@
-<div id="search-block" class="search-block">
-    <button role="button" id="search-close" class="search-close bg-none l-h-0">
-        <svg class="sy-icon sy-icon--md">
-            <use xlink:href="#sy-icon-close"></use>
-        </svg>
+<div class="search-block">
+    <button role="button" id="nnc-search-close" class="search-close bg-none p-0">
+        <i class="fas fa-times"></i>
     </button>
 
     <div class="sy-search-form container mb-5">
@@ -18,10 +16,8 @@
                                value=""
                                name="s">
                     </label>
-                    <button role="button" class="sy-btn sy-btn--search">
-                        <svg class="sy-icon sy-icon--md">
-                            <use xlink:href="#sy-icon-search"></use>
-                        </svg>
+                    <button role="button" class="btn btn--primary btn--icon">
+                        <i class="fas fa-search text-white"></i>
                     </button>
                 </form>
             </div>
