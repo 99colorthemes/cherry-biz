@@ -8,6 +8,26 @@
  * @package cherry-biz
  */
 
+
+if (!function_exists('cherry_biz_config')) :
+
+    /**
+     * Cherry biz config
+     */
+    function cherry_biz_config( $key = null ) {
+        $configs = array();
+        $configs['slider_limit'] = 2;
+
+        if($key) {
+            return $configs[$key];
+        }
+
+        return $configs;
+
+    }
+
+endif;
+
 if (!function_exists('cherry_biz_setup')) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -202,10 +222,12 @@ function cherry_biz_scripts()
 }
 add_action('wp_enqueue_scripts', 'cherry_biz_scripts');
 
+
 /**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
 
 /**
  * Custom template tags for this theme.

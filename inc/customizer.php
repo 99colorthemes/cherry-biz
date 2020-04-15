@@ -34,7 +34,8 @@ function cherry_biz_customize_register($wp_customize)
      */
     $wp_customize->add_section('cherry_biz_homepage_sidebar_section', [
         'priority' => 5,
-        'title' => esc_html__('Homepage Sidebar', 'cherry-biz')
+        'title' => esc_html__('Homepage Sidebar', 'cherry-biz'),
+        'panel' => 'cherry_biz_general_options'
     ]);
     $wp_customize->add_setting('cherry_biz_homepage_sidebar', [
         'default' => '',
@@ -48,18 +49,50 @@ function cherry_biz_customize_register($wp_customize)
         'section' => 'cherry_biz_homepage_sidebar_section'
     ]);
 
+    /**
+     * Theme Option Panel
+     */
+    $wp_customize->add_panel( 'cherry_biz_front_page_options', array(
+        'capabitity'         =>  'edit_theme_options',
+        'priority'           =>  2,
+        'title'              =>  esc_html__('Front Page Options', 'cherry-biz')
+    ) );
+
+    /**
+     * Theme Option Panel
+     */
+    $wp_customize->add_panel( 'cherry_biz_general_options', array(
+        'capabitity'         =>  'edit_theme_options',
+        'priority'           =>  1,
+        'title'              =>  esc_html__('General Options', 'cherry-biz')
+    ) );
+
+    $wp_customize->get_section('title_tagline')->panel = 'cherry_biz_general_options';
+
     require_once get_template_directory() .'/inc/customizer/top-nav.php';
     require_once get_template_directory() .'/inc/customizer/social-links.php';
     require_once get_template_directory() .'/inc/customizer/slider.php';
-
+    require_once get_template_directory() .'/inc/customizer/our-services.php';
+    require_once get_template_directory() .'/inc/customizer/our-story.php';
+    require_once get_template_directory() .'/inc/customizer/projects.php';
+    require_once get_template_directory() .'/inc/customizer/blogs.php';
+    require_once get_template_directory() .'/inc/customizer/testimonials.php';
+    require_once get_template_directory() .'/inc/customizer/clients.php';
 
     //sanitize checkbox function
-    function cherry_biz_checkbox_sanitize($input)
+    function cherry_biz_checkbox_sanitize( $input )
     {
         if ($input == 1) {
             return 1;
         } else {
             return '';
+        }
+    }
+
+    //sanitize integer
+    function cherry_biz_sanitize_integer( $input ) {
+        if( is_numeric( $input ) ) {
+            return intval( $input );
         }
     }
 }
