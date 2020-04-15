@@ -6,6 +6,7 @@
 $wp_customize->add_section('cherry_biz_top_bar_section', [
     'priority' => 1,
     'title' => esc_html__('Top Bar', 'cherry-biz'),
+    'panel' => 'cherry_biz_general_options'
 ]);
 
 $wp_customize->add_setting('cherry_biz_search_checkbox', [

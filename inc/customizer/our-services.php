@@ -6,6 +6,7 @@
 $wp_customize->add_section('cherry_biz_our_services_section', [
     'priority' => 15,
     'title' => esc_html__('Our Services', 'cherry-biz'),
+    'panel'    => 'cherry_biz_front_page_options'
 ]);
 
 $wp_customize->add_setting( 'cherry_biz_our_services_title', array(

@@ -6,6 +6,7 @@
 $wp_customize->add_section('cherry_biz_blogs_section', [
     'priority' => 30,
     'title' => esc_html__('Our Blogs', 'cherry-biz'),
+    'panel'    => 'cherry_biz_front_page_options'
 ]);
 
 $wp_customize->add_setting( 'cherry_biz_blogs_title', array(
