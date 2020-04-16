@@ -4,7 +4,7 @@
  * Top Bar
  */
 $wp_customize->add_section('cherry_biz_our_services_section', [
-    'priority' => 15,
+    'priority' => 30,
     'title' => esc_html__('Our Services', 'cherry-biz'),
     'panel'    => 'cherry_biz_front_page_options'
 ]);
@@ -21,8 +21,19 @@ $wp_customize->add_control( 'cherry_biz_our_services_title', array(
     'settings'               => 'cherry_biz_our_services_title',
 ));
 
-$length = 3;
-for ($counter = 0; $counter < $length; $counter++) {
+$wp_customize->add_setting( 'cherry_biz_our_services_sub_title', array(
+    'default'               => '',
+    'capability'            => 'edit_theme_options',
+    'sanitize_callback'     => 'sanitize_text_field'
+));
+
+$wp_customize->add_control( 'cherry_biz_our_services_sub_title', array(
+    'label'                  => esc_html__('Sub Title ', 'cherry-biz') ,
+    'section'                => 'cherry_biz_our_services_section',
+    'settings'               => 'cherry_biz_our_services_sub_title',
+));
+
+for ($counter = 0; $counter < cherry_biz_config('services_limit'); $counter++) {
 
     $wp_customize->add_setting( 'cherry_biz_our_services_heading_'.$counter, array(
         'sanitize_callback'	     =>  'cherry_biz_sanitize_text'

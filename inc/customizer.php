@@ -72,12 +72,14 @@ function cherry_biz_customize_register($wp_customize)
     require_once get_template_directory() .'/inc/customizer/top-nav.php';
     require_once get_template_directory() .'/inc/customizer/social-links.php';
     require_once get_template_directory() .'/inc/customizer/slider.php';
+    require_once get_template_directory() .'/inc/customizer/clients.php';
     require_once get_template_directory() .'/inc/customizer/our-services.php';
     require_once get_template_directory() .'/inc/customizer/our-story.php';
     require_once get_template_directory() .'/inc/customizer/projects.php';
-    require_once get_template_directory() .'/inc/customizer/blogs.php';
     require_once get_template_directory() .'/inc/customizer/testimonials.php';
-    require_once get_template_directory() .'/inc/customizer/clients.php';
+    require_once get_template_directory() .'/inc/customizer/blogs.php';
+
+
 
     //sanitize checkbox function
     function cherry_biz_checkbox_sanitize( $input )

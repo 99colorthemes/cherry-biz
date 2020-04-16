@@ -2,7 +2,7 @@
     <div class="swiper-container nnc-hero-slider-container">
         <div class="swiper-wrapper">
             <?php
-                for ($counter = 0; $counter < cherry_biz_config('slider_limit'); $counter++) {
+                for ($counter = 0; $counter < cherry_biz_config('client_limit'); $counter++) {
                 $page = get_post(get_theme_mod('cherry_biz_slider_page_'.$counter));
              //   print_r($page);
               //  die;
