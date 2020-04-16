@@ -4,13 +4,12 @@
  * Top Bar
  */
 $wp_customize->add_section('cherry_biz_clients_section', [
-    'priority' => 30,
+    'priority' => 20,
     'title' => esc_html__('Clients', 'cherry-biz'),
     'panel'    => 'cherry_biz_front_page_options'
 ]);
 
-$length = 4;
-for ($counter = 0; $counter < $length; $counter++) {
+for ($counter = 0; $counter < cherry_biz_config('clients_limit'); $counter++) {
 
     $wp_customize->add_setting( 'cherry_biz_clients_heading_'.$counter, array(
         'sanitize_callback'	     =>  'cherry_biz_sanitize_text'

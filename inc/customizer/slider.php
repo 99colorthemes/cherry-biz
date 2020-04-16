@@ -4,7 +4,7 @@
  * Top Bar
  */
 $wp_customize->add_section('cherry_biz_slider_section', [
-    'priority' => 15,
+    'priority' => 10,
     'title' => esc_html__('Slider', 'cherry-biz'),
     'panel'    => 'cherry_biz_front_page_options'
 ]);

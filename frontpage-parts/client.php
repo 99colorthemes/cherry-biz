@@ -4,21 +4,21 @@
         <div class="row">
             <div class="col-12">
                 <div class="nnc-oc__block">
-                    <div class="nnc-oc__item">
-                        <img src="http://localhost:8888/cherry-biz/wp-content/uploads/2020/03/Screen-Shot-2020-03-15-at-7.04.09-PM.png" alt="Client Logo">
-                    </div>
-                    <div class="nnc-oc__item">
-                        <img src="http://localhost:8888/cherry-biz/wp-content/uploads/2020/03/Screen-Shot-2020-03-15-at-7.06.44-PM.png" alt="Client Logo">
-                    </div>
-                    <div class="nnc-oc__item">
-                        <img src="http://localhost:8888/cherry-biz/wp-content/uploads/2020/03/Screen-Shot-2020-03-15-at-7.24.16-PM.png" alt="Client Logo">
-                    </div>
-                    <div class="nnc-oc__item">
-                        <img src="http://localhost:8888/cherry-biz/wp-content/uploads/2020/03/Screen-Shot-2020-03-15-at-7.24.00-PM.png" alt="Client Logo">
-                    </div>
-                    <div class="nnc-oc__item">
-                        <img src="http://localhost:8888/cherry-biz/wp-content/uploads/2020/03/Screen-Shot-2020-03-15-at-7.22.43-PM.png" alt="Client Logo">
-                    </div>
+                    <?php
+                        for ($counter = 0; $counter < cherry_biz_config('clients_limit'); $counter++) {
+                            $cherry_biz_client_image = get_theme_mod('cherry_biz_clients_image_'.$counter);
+                            $cherry_biz_client_name = get_theme_mod('cherry_biz_clients_name_'.$counter);
+
+                            if($cherry_biz_client_image) :
+                    ?>
+                        <div class="nnc-oc__item">
+                            <img src="<?php echo esc_url($cherry_biz_client_image); ?>"
+                                 alt="<?php echo esc_attr($cherry_biz_client_name); ?>">
+                        </div>
+                    <?php
+                            endif;
+                        } ?>
+
                 </div>
             </div>
         </div>
