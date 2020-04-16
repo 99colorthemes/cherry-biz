@@ -576,7 +576,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #666;
-	border: 1px solid #ececec;
+	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 6px;
 	background-color: #fff;
@@ -1428,29 +1428,7 @@ input.submit:hover {
 /*=====  End of Default Comments  ======*/
 
 /*=====  End of Single Post  ======*/
-.wpcf7-form p {
-	padding: 8px 0;
-}
 
-input.wpcf7-form-control {
-	width: 100%;
-	padding: 6px 8px;
-	font-size: 14px;
-}
-
-input.wpcf7-submit {
-	background: #666;
-	box-shadow: none;
-	text-shadow: none;
-	color: #fff;
-	border: 0;
-	padding: 12px;
-}
-
-input.wpcf7-submit:hover {
-	background: #fb2056;
-	box-shadow: none;
-}
 
 .archive article,
 .search article
@@ -1636,6 +1614,7 @@ ol.comment-list {
 
 .nnc-footer {
 	padding-top: 3rem;
+	background-color: #fff;
 }
 
 .nnc-footer__block {
@@ -1675,7 +1654,7 @@ ol.comment-list {
 	padding: 0;
 }
 
-.sy-content-area {
+.nnc-content-area {
 	background-color: #fff;
 	padding: 1.875rem;
 	box-shadow: 0 3px 4px 0px #eee;

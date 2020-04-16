@@ -3,7 +3,8 @@
 $wp_customize->add_section('cherry_biz_social_links_section', [
     'priority' => 1,
     'title' => esc_html__('Social Links', 'cherry-biz'),
-    'panel' => 'cherry_biz_general_options'
+    'panel' => 'cherry_biz_general_options',
+    'description' => esc_html__('Enter Social Links:', 'cherry-biz')
 ]);
 $wp_customize->add_setting('cherry_biz_facebook_link', [
     'default' => '',
