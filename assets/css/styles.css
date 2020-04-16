@@ -181,6 +181,34 @@
   background-color: #fff;
 }
 
+.nnc-scroll-top {
+  position: fixed;
+  right: -20px;
+  bottom: 15px;
+  z-index: 111;
+  opacity: 0;
+  visibility: hidden;
+  background: #fb2056;
+  width: 46px;
+  height: 46px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.nnc-scroll-top:hover {
+  background-color: #ee043e;
+}
+
+.nnc-scroll-top.show {
+  opacity: 1;
+  right: 15px;
+  visibility: visible;
+  transition: all 400ms ease-in-out;
+}
+
 .nnc-hero,
 .nnc-testimonial {
   position: relative;

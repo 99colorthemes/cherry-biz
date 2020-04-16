@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+
     $("#nnc-menu-icon").click(function(){
         $(".nnc-sidenav").addClass("active");
     });
@@ -12,7 +13,6 @@ jQuery(document).ready(function($){
     });
 
     // Search
-
     $("#nnc-search-icon").click(function(){
         $(".search-block").addClass("active");
     });
@@ -20,7 +20,6 @@ jQuery(document).ready(function($){
     $("#nnc-search-close").click(function(){
         $(".search-block").removeClass("active");
     });
-
 
     //nnc-hero-slider
     var hero_slider = new Swiper('.nnc-hero-slider-container', {
@@ -50,5 +49,18 @@ jQuery(document).ready(function($){
             clickable: true,
         },
     });
-    
+
+    // Scroll To Top
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            $('.nnc-scroll-top').addClass("show");
+        } else {
+            $('.nnc-scroll-top').removeClass("show");
+        }
+    });
+
+    $(".nnc-scroll-top").on("click", function () {
+        $("html, body").animate({scrollTop: 0}, 600);
+        return false;
+    });
 });

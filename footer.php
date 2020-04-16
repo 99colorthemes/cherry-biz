@@ -73,7 +73,7 @@
                     $output .= '<span class="sep">';
                     $output .= esc_html__(' | ', 'cherry-biz');
                     $output .= '</span>';
-                    $output .= esc_html__(' Theme By: ', 'cherry-biz');
+                    $output .= esc_html__(' Designed By ', 'cherry-biz');
                     $output .= '<a target="_blank" href="https://99colorthemes.com">';
                     $output .= esc_html__('99colorthemes', 'cherry-biz');
                     $output .= '</a>';
@@ -86,6 +86,11 @@
         </div>
     </div>
 </footer>
+
+<button role="button" class="nnc-scroll-top transition">
+    <i class="fas fa-angle-up"></i>
+</button>
+
 </div><!-- #page -->
 
 <div class="sy-icon-file" style="display: none;"><?php require get_template_directory() . '/sy-svg-icons.php'; ?>
