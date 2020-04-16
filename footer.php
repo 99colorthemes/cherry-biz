@@ -93,9 +93,6 @@
 
 </div><!-- #page -->
 
-<div class="sy-icon-file" style="display: none;"><?php require get_template_directory() . '/sy-svg-icons.php'; ?>
-</div>
-
 <?php wp_footer(); ?>
 
 </body>
