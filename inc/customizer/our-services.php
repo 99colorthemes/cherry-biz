@@ -5,9 +5,23 @@
  */
 $wp_customize->add_section('cherry_biz_our_services_section', [
     'priority' => 30,
-    'title' => esc_html__('Our Services', 'cherry-biz'),
+    'title' => esc_html__('Services', 'cherry-biz'),
     'panel'    => 'cherry_biz_front_page_options'
 ]);
+
+$wp_customize->add_setting('cherry_biz_our_services_checkbox', [
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'cherry_biz_checkbox_sanitize'
+]);
+
+$wp_customize->add_control('cherry_biz_our_services_checkbox', [
+    'type' => 'checkbox',
+    'label' => esc_html__('Enable Services', 'cherry-biz'),
+    'settings' => 'cherry_biz_our_services_checkbox',
+    'section' => 'cherry_biz_our_services_section',
+]);
+
 
 $wp_customize->add_setting( 'cherry_biz_our_services_title', array(
     'default'               => '',

@@ -2,8 +2,9 @@
 $cherry_biz_testimonials_title = get_theme_mod('cherry_biz_testimonials_title');
 $cherry_biz_testimonials_sub_title = get_theme_mod('cherry_biz_testimonials_sub_title');
 $cherry_biz_testimonials_category = get_theme_mod('cherry_biz_testimonials_category');
+$cherry_biz_testimonials_checkbox = get_theme_mod('cherry_biz_testimonials_checkbox');
 
-if($cherry_biz_testimonials_category) :
+if($cherry_biz_testimonials_category && $cherry_biz_testimonials_checkbox) :
 
     $cherry_biz_testimonials = new WP_Query(array(
         'posts_per_page' =>  cherry_biz_config('testimonials_limit'),

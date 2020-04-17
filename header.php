@@ -32,9 +32,9 @@ if ( function_exists( 'wp_body_open' ) ) {
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'cherry-biz'); ?></a>
 
         <?php
-            require get_template_directory() . '/search-toggle.php';
+            require get_template_directory() . '/common/search-toggle.php';
 
-            require get_template_directory() . '/common/top-nav.php';
+            require get_template_directory() . '/common/top-bar.php';
         ?>
 
         <header id="masthead" class="site-header nnc-header">
@@ -86,7 +86,7 @@ if ( function_exists( 'wp_body_open' ) ) {
                                 <svg class="nnc-icon nnc-icon--lg" id="nnc-icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459"><path d="M0 382.5h459v-51H0v51zM0 255h459v-51H0v51zM0 76.5v51h459v-51H0z"/></svg>
                             </button>
 
-                            <?php require get_template_directory() . '/template-parts/side-menu.php'; ?>
+                            <?php require get_template_directory() . '/common/side-menu.php'; ?>
                         </div>
                     </div>
                 </div>

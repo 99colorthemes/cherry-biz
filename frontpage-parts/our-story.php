@@ -2,8 +2,9 @@
 
 $cherry_biz_our_story_page_id = get_theme_mod('cherry_biz_our_story_page');
 $cherry_biz_our_story_title = get_theme_mod('cherry_biz_our_story_title');
+$cherry_biz_our_story_checkbox = get_theme_mod('cherry_biz_our_story_checkbox');
 
-if($cherry_biz_our_story_page_id) :
+if($cherry_biz_our_story_page_id && $cherry_biz_our_story_checkbox) :
     $page = get_post($cherry_biz_our_story_page_id);
 ?>
 

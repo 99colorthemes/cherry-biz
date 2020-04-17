@@ -3,7 +3,9 @@ $cherry_biz_blogs_title = get_theme_mod('cherry_biz_blogs_title');
 $cherry_biz_blogs_sub_title = get_theme_mod('cherry_biz_blogs_sub_title');
 $cherry_biz_blogs_category = get_theme_mod('cherry_biz_blogs_category');
 
-if($cherry_biz_blogs_category) :
+$cherry_biz_blogs_checkbox = get_theme_mod('cherry_biz_blogs_checkbox');
+
+if($cherry_biz_blogs_category && $cherry_biz_blogs_checkbox) :
 
     $cherry_biz_blogs = new WP_Query(array(
         'posts_per_page' =>  cherry_biz_config('blogs_limit'),

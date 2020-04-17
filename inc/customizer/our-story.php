@@ -9,6 +9,19 @@ $wp_customize->add_section('cherry_biz_our_story_section', [
     'panel'    => 'cherry_biz_front_page_options'
 ]);
 
+$wp_customize->add_setting('cherry_biz_our_story_checkbox', [
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'cherry_biz_checkbox_sanitize'
+]);
+
+$wp_customize->add_control('cherry_biz_our_story_checkbox', [
+    'type' => 'checkbox',
+    'label' => esc_html__('Enable Our Story', 'cherry-biz'),
+    'settings' => 'cherry_biz_our_story_checkbox',
+    'section' => 'cherry_biz_our_story_section',
+]);
+
 $wp_customize->add_setting( 'cherry_biz_our_story_title', array(
     'default'               => '',
     'capability'            => 'edit_theme_options',

@@ -69,7 +69,7 @@ function cherry_biz_customize_register($wp_customize)
 
     $wp_customize->get_section('title_tagline')->panel = 'cherry_biz_general_options';
 
-    require_once get_template_directory() .'/inc/customizer/top-nav.php';
+    require_once get_template_directory() .'/inc/customizer/top-bar.php';
     require_once get_template_directory() .'/inc/customizer/social-links.php';
     require_once get_template_directory() .'/inc/customizer/slider.php';
     require_once get_template_directory() .'/inc/customizer/clients.php';

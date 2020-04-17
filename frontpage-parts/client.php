@@ -1,3 +1,7 @@
+<?php
+$cherry_biz_clients_checkbox = get_theme_mod('cherry_biz_clients_checkbox');
+if($cherry_biz_clients_checkbox) :
+?>
 
 <section class="nnc-oc bg-white nnc-s-padd">
     <div class="container">
@@ -24,3 +28,4 @@
         </div>
     </div>
 </section>
+<?php endif; ?>

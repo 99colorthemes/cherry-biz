@@ -1,3 +1,7 @@
+<?php
+$cherry_biz_our_slider_checkbox = get_theme_mod('cherry_biz_our_slider_checkbox');
+if($cherry_biz_our_slider_checkbox) :
+?>
 <section class="nnc-hero">
     <div class="swiper-container nnc-hero-slider-container">
         <div class="swiper-wrapper">
@@ -34,3 +38,4 @@
         </div>
     </div>
 </section>
+<?php endif; ?>

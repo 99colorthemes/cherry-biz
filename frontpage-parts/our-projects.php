@@ -2,10 +2,9 @@
 $cherry_biz_projects_title = get_theme_mod('cherry_biz_projects_title');
 $cherry_biz_projects_sub_title = get_theme_mod('cherry_biz_projects_sub_title');
 $cherry_biz_projects_category = get_theme_mod('cherry_biz_projects_category');
+$cherry_biz_projects_checkbox = get_theme_mod('cherry_biz_projects_checkbox');
 
-
-
-if($cherry_biz_projects_category) :
+if($cherry_biz_projects_category && $cherry_biz_projects_checkbox) :
 
     $cherry_biz_projects = new WP_Query(array(
         'posts_per_page' =>  cherry_biz_config('projects_limit'),

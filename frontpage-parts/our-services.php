@@ -2,6 +2,9 @@
 
 $cherry_biz_our_services_title = get_theme_mod('cherry_biz_our_services_title');
 $cherry_biz_our_services_sub_title = get_theme_mod('cherry_biz_our_services_sub_title');
+$cherry_biz_our_services_checkbox = get_theme_mod('cherry_biz_our_services_checkbox');
+
+if($cherry_biz_our_services_checkbox) :
 
 ?>
 
@@ -49,3 +52,4 @@ $cherry_biz_our_services_sub_title = get_theme_mod('cherry_biz_our_services_sub_
         </div>
     </div>
 </section>
+<?php endif; ?>

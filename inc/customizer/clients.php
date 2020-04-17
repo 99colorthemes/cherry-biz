@@ -9,6 +9,19 @@ $wp_customize->add_section('cherry_biz_clients_section', [
     'panel'    => 'cherry_biz_front_page_options'
 ]);
 
+$wp_customize->add_setting('cherry_biz_clients_checkbox', [
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'cherry_biz_checkbox_sanitize'
+]);
+
+$wp_customize->add_control('cherry_biz_clients_checkbox', [
+    'type' => 'checkbox',
+    'label' => esc_html__('Enable Clients', 'cherry-biz'),
+    'settings' => 'cherry_biz_clients_checkbox',
+    'section' => 'cherry_biz_clients_section',
+]);
+
 for ($counter = 0; $counter < cherry_biz_config('clients_limit'); $counter++) {
 
     $wp_customize->add_setting( 'cherry_biz_clients_heading_'.$counter, array(

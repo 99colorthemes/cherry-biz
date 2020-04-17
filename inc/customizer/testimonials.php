@@ -9,6 +9,20 @@ $wp_customize->add_section('cherry_biz_testimonials_section', [
     'panel'    => 'cherry_biz_front_page_options'
 ]);
 
+$wp_customize->add_setting('cherry_biz_testimonials_checkbox', [
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'cherry_biz_checkbox_sanitize'
+]);
+
+$wp_customize->add_control('cherry_biz_testimonials_checkbox', [
+    'type' => 'checkbox',
+    'label' => esc_html__('Enable Testimonials', 'cherry-biz'),
+    'settings' => 'cherry_biz_testimonials_checkbox',
+    'section' => 'cherry_biz_testimonials_section',
+]);
+
+
 $wp_customize->add_setting( 'cherry_biz_testimonials_title', array(
     'default'               => '',
     'capability'            => 'edit_theme_options',
