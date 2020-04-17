@@ -205,32 +205,10 @@ function cherry_biz_scripts()
 }
 add_action('wp_enqueue_scripts', 'cherry_biz_scripts');
 
-if (!function_exists('cherry_biz_config')) :
-
-    /**
-     * Cherry biz config
-     */
-    function cherry_biz_config( $key = null ) {
-        $configs = array();
-        $configs['slider_limit'] = 2;
-        $configs['clients_limit'] = 4;
-        $configs['services_limit'] = 3;
-        $configs['projects_limit'] = 8;
-        $configs['testimonials_limit'] = 3;
-        $configs['blogs_limit'] = 3;
-        $configs['services_page_excerpt_limit'] = 30;
-        $configs['story_page_excerpt_limit'] = 30;
-
-        if($key) {
-            return $configs[$key];
-        }
-
-        return $configs;
-
-    }
-
-endif;
-
+/**
+ * Cherry biz function
+ */
+require get_template_directory() . '/inc/cherry-biz-function.php';
 
 /**
  * Implement the Custom Header feature.
