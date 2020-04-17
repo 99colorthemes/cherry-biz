@@ -83,9 +83,7 @@ if ( function_exists( 'wp_body_open' ) ) {
                                 </nav>
                             </div>
                             <button id="nnc-menu-icon" class="nnc-menu-icon d-lg-none d-block l-h-0">
-                                <svg class="nnc-icon nnc-icon--lg">
-                                    <use xlink:href="#nnc-icon-menu"></use>
-                                </svg>
+                                <svg class="nnc-icon nnc-icon--lg" id="nnc-icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459"><path d="M0 382.5h459v-51H0v51zM0 255h459v-51H0v51zM0 76.5v51h459v-51H0z"/></svg>
                             </button>
 
                             <?php require get_template_directory() . '/template-parts/side-menu.php'; ?>

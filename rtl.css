@@ -405,17 +405,8 @@ h1, h2, h3, h4, h5, h6 {
 	padding-left: .8rem;
 }
 
-.sy-pagination {
+.nnc-pagination {
 	display: flex;
-}
-
-.sy-header__social > a {
-	margin-left: 2rem;
-	margin-right: 0;
-}
-
-.sy-header__search {
-	margin-left: 0;
 }
 
 .widget li {
