@@ -92,6 +92,9 @@ if (!function_exists('cherry_biz_setup')) :
          * Image Size
          */
         add_image_size('cherry-biz-default', 392, 260, true);
+
+
+        add_post_type_support( 'page', 'excerpt' );
     }
 endif;
 add_action('after_setup_theme', 'cherry_biz_setup');
@@ -215,6 +218,8 @@ if (!function_exists('cherry_biz_config')) :
         $configs['projects_limit'] = 8;
         $configs['testimonials_limit'] = 3;
         $configs['blogs_limit'] = 3;
+        $configs['services_page_excerpt_limit'] = 30;
+        $configs['story_page_excerpt_limit'] = 30;
 
         if($key) {
             return $configs[$key];

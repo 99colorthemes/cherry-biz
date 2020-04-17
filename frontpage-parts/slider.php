@@ -2,21 +2,25 @@
     <div class="swiper-container nnc-hero-slider-container">
         <div class="swiper-wrapper">
             <?php
-                for ($counter = 0; $counter < cherry_biz_config('client_limit'); $counter++) {
-                $page = get_post(get_theme_mod('cherry_biz_slider_page_'.$counter));
-             //   print_r($page);
-              //  die;
+                for ($counter = 0; $counter < cherry_biz_config('slider_limit'); $counter++) {
+                    $pageId = get_theme_mod('cherry_biz_slider_page_'.$counter);
+
+                    if($pageId) :
+                        $page = get_post($pageId);
             ?>
                 <div class="swiper-slide">
-                    <div class="nnc-banner d-flex align-items-center" style="background-image: url('http://localhost:8888/cherry-biz/wp-content/uploads/2020/03/StockSnap_ANRQEVKQFG-scaled.jpg');">
+                    <div class="nnc-banner d-flex align-items-center"
+                         style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url($pageId)); ?>');">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-8">
                                     <div class="nnc-banner__info">
-                                        <h5 class="nnc-banner__title"><?php echo get_theme_mod('cherry_biz_slider_title_'.$counter); ?></h5>
-                                        <h2  class="nnc-banner__subtitle"><?php echo $page->post_title; ?></span></h2>
+                                        <h5 class="nnc-banner__title"><?php echo esc_html(get_theme_mod('cherry_biz_slider_title_'.$counter)); ?></h5>
+                                        <h2  class="nnc-banner__subtitle"><?php echo esc_html($page->post_title); ?></span></h2>
                                         <div class="nnc-banner__btn">
-                                            <a href="<?php echo $page->guid; ?>" class="btn btn--primary">Read More</a>
+                                            <a href="<?php echo esc_url($page->guid); ?>" class="btn btn--primary">
+                                                <?php echo esc_html__('Read More', 'cherry-biz'); ?>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -24,7 +28,9 @@
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php
+                    endif;
+                } ?>
         </div>
     </div>
 </section>

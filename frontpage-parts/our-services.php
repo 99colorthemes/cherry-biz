@@ -17,22 +17,34 @@ $cherry_biz_our_services_sub_title = get_theme_mod('cherry_biz_our_services_sub_
         </div>
 
         <div class="row">
+            <?php
 
+            for ($counter = 0; $counter < cherry_biz_config('services_limit'); $counter++) {
+                $pageId = get_theme_mod('cherry_biz_our_services_page_'.$counter);
 
-            <div class="col-md-6 col-lg-4 d-flex">
-                <div class="card nnc-card text-center">
-                    <div class="card-body">
-                        <div class="nnc-f__icon">
-                            <i class="fas fa-universal-access"></i>
-                        </div>
-                        <h4 class="nnc-f__title"><a href="" class="">Strategies & Planning</a></h4>
-                        <div class="nnc-f__content"><p>Integer auctor massa at erat vehicula, id dapibus urna lacinia. Proin luctus eget
-                                lorem eu ullamcorper. Morbi gravida rhoncus egestatra</p>
+                if($pageId) :
+                    $page = get_post($pageId);
+            ?>
+
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="card nnc-card text-center">
+                        <div class="card-body">
+                            <div class="nnc-f__icon">
+                                <i class="<?php echo esc_attr(get_theme_mod('cherry_biz_our_services_icon_'.$counter)); ?>"></i>
+                            </div>
+                            <h4 class="nnc-f__title">
+                                <a href="<?php echo esc_url($page->guid); ?>" class="">
+                                    <?php echo esc_html($page->post_title); ?>
+                                </a>
+                            </h4>
+                            <div class="nnc-f__content"><p><?php echo esc_html(wp_trim_words($page->post_excerpt, cherry_biz_config('services_page_excerpt_limit'))); ?></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            <?php
+            endif;
+            } ?>
 
         </div>
     </div>

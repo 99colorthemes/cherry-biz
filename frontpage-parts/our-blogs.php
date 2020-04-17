@@ -51,6 +51,7 @@ if($cherry_biz_blogs_category) :
             </div>
         <?php
             endwhile;
+            wp_reset_postdata();
         endif;
     ?>
 
