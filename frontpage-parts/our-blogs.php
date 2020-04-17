@@ -13,7 +13,7 @@ if($cherry_biz_blogs_category) :
 
 ?>
 
-<section class="nnc-blog bg-white nnc-s-padd">
+<section class="nnc-blog nnc-s-padd">
     <div class="container">
         <div class="row">
             <div class="col-12">

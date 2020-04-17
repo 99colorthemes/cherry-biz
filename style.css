@@ -1036,8 +1036,6 @@ object {
 	/*width: 100%;*/
 /*}*/
 
-/*Custom CSS*/
-
 /*=============================================
 =            Default Widgets            =
 =============================================*/
@@ -1154,11 +1152,12 @@ a.post-edit-link:hover {
 .home .navigation.posts-navigation {
 	margin-bottom: 4rem;
 }
-.sy-pagination {
+
+.nnc-pagination {
 	margin-bottom: 3rem;
 }
 
-.sy-pagination .page-numbers {
+.nnc-pagination .page-numbers {
 	background-color: #fff;
 	padding: .6rem 1rem .5rem;
 	display: inline-block;
@@ -1398,14 +1397,6 @@ input.submit:hover {
 	padding: 10px;
 }
 
-.search-close .sy-icon {
-	fill: #666;
-}
-
-.search-close .sy-icon:hover {
-	fill: #666;
-}
-
 .search-form label {
 	width: 100%;
 	margin-bottom: 1rem;
@@ -1439,62 +1430,6 @@ input.submit:hover {
 
 
 /*Custom CSS*/
-
-.l-h-0 {
-	line-height: 0;
-}
-
-.sy-card {
-	background-color: #fff;
-	box-shadow: 0 3px 4px 0px #eee;
-	margin-bottom: 1.9rem;
-	padding: 0;
-	width: 100%;
-	transition: transform 300ms ease-in-out;
-}
-
-.sy-card__img {
-	position: relative;
-}
-
-.sy-card__img a:after {
-	content: '';
-	display: block;
-	background-color: #000;
-	opacity: 0;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transition: all 500ms ease-in-out;
-}
-
-.sy-card:hover .sy-card__img a:after {
-	opacity: .4;
-}
-
-.sy-card__img img {
-	transition: transform 500ms ease-in-out;
-	transform: scale(1);
-	-webkit-transform: scale(1);
-}
-
-.sy-card:hover .sy-card__img img {
-	transform: scale(1.05);
-	-webkit-transform: scale(1.05);
-}
-
-.sy-card__img a {
-	display: block;
-	line-height: 0;
-	overflow: hidden;
-}
-
-.transition {
-	transition: all 200ms ease-in;
-}
-
 .entry-title a {
 	color: #444;
 	text-decoration: none;
@@ -1642,16 +1577,6 @@ ol.comment-list {
 
 .footer-bottom {
 	background-color: #f7f8fa;
-}
-
-.sy-header__social > a {
-	margin-right: 2rem;
-}
-
-.sy-mobile-menu {
-	margin-right: 1.4rem;
-	background-color: transparent;
-	padding: 0;
 }
 
 .nnc-content-area {

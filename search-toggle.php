@@ -3,7 +3,7 @@
         <i class="fas fa-times"></i>
     </button>
 
-    <div class="sy-search-form container mb-5">
+    <div class="nnc-search-form container mb-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
                 <form role="search" method="get" class="search-form d-flex align-items-center" action="">
