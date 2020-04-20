@@ -46,7 +46,7 @@ if($cherry_biz_blogs_category && $cherry_biz_blogs_checkbox) :
                         <div class="nnc-blog__date">
                             <span class="text-muted"><?php the_author(); ?></span>
                             <i class="fas fa-circle"></i>
-                            <span class="text-muted"><a href=""><?php comments_popup_link('No Comment', '1 Comment', '% Comments'); ?></a></span>
+                            <span class="text-muted"><?php comments_number('No Comment', '1 Comment', '% Comments'); ?></span>
                         </div>
                     </div>
                 </div>

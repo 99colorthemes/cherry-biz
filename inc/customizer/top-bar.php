@@ -7,8 +7,18 @@ $wp_customize->add_section('cherry_biz_top_bar_section', [
     'priority' => 1,
     'title' => esc_html__('Top Bar', 'cherry-biz'),
     'panel' => 'cherry_biz_general_options',
-    'description' => esc_html__('Edit Topbar Section:', 'cherry-biz')
 ]);
+
+$wp_customize->add_setting( 'cherry_biz_topbar_heading_', array(
+    'sanitize_callback'	     =>  'cherry_biz_sanitize_text',
+) );
+$wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_topbar_heading_', array(
+    'settings'		        => 'cherry_biz_topbar_heading_',
+    'section'		        => 'cherry_biz_top_bar_section',
+    'priority' => 1,
+    'label'			        => esc_html__( 'Topbar Section', 'cherry-biz' ),
+    'description'			=> esc_html__( 'You can edit text and enable social links and search.', 'cherry-biz' )
+)));
 
 $wp_customize->add_setting('cherry_biz_search_checkbox', [
     'default' => '',
@@ -17,6 +27,7 @@ $wp_customize->add_setting('cherry_biz_search_checkbox', [
 ]);
 $wp_customize->add_control('cherry_biz_search_checkbox', [
     'type' => 'checkbox',
+    'priority' => 5,
     'label' => esc_html__('Enable Search', 'cherry-biz'),
     'settings' => 'cherry_biz_search_checkbox',
     'section' => 'cherry_biz_top_bar_section',
@@ -29,6 +40,7 @@ $wp_customize->add_setting('cherry_biz_social_link_checkbox', [
 ]);
 $wp_customize->add_control('cherry_biz_social_link_checkbox', [
     'type' => 'checkbox',
+    'priority' => 4,
     'label' => esc_html__('Enable Social Link', 'cherry-biz'),
     'settings' => 'cherry_biz_social_link_checkbox',
     'section' => 'cherry_biz_top_bar_section',
@@ -43,8 +55,8 @@ foreach ($counters as $counter) {
     ));
 
     $wp_customize->add_control( 'cherry_biz_top_bar_text_'.$counter, array(
-        'priority'               => 80,
-        'label'                  => esc_html__('Text ', 'cherry-biz') . $counter. ' :',
+        'priority'               => 3,
+        'label'                  => esc_html__('Text ', 'cherry-biz') . $counter. ':',
         'section'                => 'cherry_biz_top_bar_section',
         'settings'               => 'cherry_biz_top_bar_text_'.$counter,
     ));

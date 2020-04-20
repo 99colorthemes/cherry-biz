@@ -252,11 +252,19 @@
   z-index: 10;
 }
 
+.nnc-hero--bg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
 .nnc-banner {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
-  height: 100vh;
+  height: 768px;
   width: 100%;
   position: relative;
 }
@@ -355,6 +363,7 @@
 }
 
 .nnc-card {
+  width: 100%;
   border: none;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
@@ -368,6 +377,10 @@
 
 .nnc-about {
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.nnc-about__img {
+  margin-right: 1rem;
 }
 
 .nnc-about__desc {
@@ -456,12 +469,12 @@
   margin-bottom: 1rem;
 }
 
-.nnc-testimonial__client span {
-  color: #fb2056;
+.nnc-testimonial__client-designation {
+  color: #999;
 }
 
 .nnc-blog {
-  background-color: #999;
+  background-color: #f3f3f3;
 }
 
 .nnc-blog__title {
@@ -485,6 +498,7 @@
 
 .nnc-blog__date span {
   padding-right: 0.7rem;
+  text-transform: capitalize;
 }
 
 .nnc-map {

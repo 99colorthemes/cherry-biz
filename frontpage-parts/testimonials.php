@@ -36,17 +36,17 @@ if($cherry_biz_testimonials_category && $cherry_biz_testimonials_checkbox) :
                             <div class="nnc-testimonial__item">
                                 <i class="fas fa-quote-left nnc-icon--xl"></i>
                                 <div class="nnc-testimonial__content">
-                                    <?php the_excerpt(); ?>
+                                    <?php the_content(); ?>
                                 </div>
                                 <div class="nn-testomonial__client">
                                     <h5 class="nnc-testimonial__client-name"><?php the_title(); ?></h5>
-                                    <span>
+                                    <span class="nnc-testimonial__client-designation">
                                         <?php
                                             $output = '';
                                             foreach ($tags as $key => $tag) {
                                                 $output .= $tag->name;
 
-                                                if(count($tag) == ($key + 1)) {
+                                                if(count($tag) != ($key + 1)) {
                                                     $output .= ' / ';
                                                 }
                                             }

@@ -20,16 +20,38 @@ input[type=checkbox]:before {
 	margin: -3px 0 0 -4px;
 }
 
+/*.cherry-biz-accordion-section-title {*/
+	/*color: #fff;*/
+	/*padding: 6px 10px 8px 14px ;*/
+	/*background-color: #666;*/
+	/*border-bottom: 1px solid #eee;*/
+	/*border-top: 1px solid #eee;*/
+	/*line-height: 21px;*/
+	/*margin: 0 -12px 0;*/
+/*}*/
+
 .cherry-biz-accordion-section-title {
-	color: #fff;
-	border-bottom: 1px solid #333;
-	border-top: 1px solid #333 ;
-	padding: 6px 10px 8px 14px ;
-	background-color: #333;
-
-
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #eee;
+	color: #444;
+	padding: 8px 10px 10px 14px;
+	background-color: #fff;
+	box-shadow: 0 3px 4px 0px #ccc;
 	line-height: 21px;
 	margin: 0 -12px 0;
+}
+
+/*.cherry-biz-accordion-section-title {*/
+	/*color: #555d66;*/
+	/*font-weight: 700;*/
+	/*font-size: 15px;*/
+	/*border-left: 3px solid #777;*/
+	/*padding-left: 8px;*/
+	/*text-transform: uppercase;*/
+/*}*/
+
+.cherry-biz-accordion-section-desc {
+	margin-bottom: 0;
+}
+
+ul.accordion-section li:nth-child(2) {
+	margin-bottom: 0;
 }
