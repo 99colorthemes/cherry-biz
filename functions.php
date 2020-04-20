@@ -181,11 +181,9 @@ function cherry_biz_scripts()
 
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css');
 
+    wp_enqueue_style('Font Awesome', get_template_directory_uri() . '/assets/css/all.css');
+
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper.css');
-
-    //wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap');
-
-    wp_enqueue_style('cherry-biz-custom-css', get_template_directory_uri() . '/assets/css/custom.css');
 
     wp_enqueue_style('cherry-biz-styles-css', get_template_directory_uri() . '/assets/css/styles.css');
 
