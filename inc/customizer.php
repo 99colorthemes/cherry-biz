@@ -79,7 +79,36 @@ function cherry_biz_customize_register($wp_customize)
     require_once get_template_directory() .'/inc/customizer/testimonials.php';
     require_once get_template_directory() .'/inc/customizer/blogs.php';
 
+    $wp_customize->add_section('cherry_biz_contact_page_section', [
+        'title' => esc_html__('Contact Page Options', 'cherry-biz'),
+        'priority'           =>  3,
+    ]);
 
+    $wp_customize->add_setting( 'cherry_biz_contact_map', array(
+        'default'               =>  '',
+        'capability'            =>  'edit_theme_options',
+        'sanitize_callback'     =>  'cherry_biz_sanitize_googlemaps'
+    ));
+
+    $wp_customize->add_control( 'cherry_biz_contact_map', array(
+        'type'                  =>  'textarea',
+        'label'                 =>  esc_html__('Contact Map', 'cherry-biz'),
+        'section'               =>  'cherry_biz_contact_page_section',
+        'settings'              =>  'cherry_biz_contact_map'
+    ));
+
+    $wp_customize->add_setting( 'cherry_biz_contact_shortcode', array(
+        'default'                =>  '',
+        'capability'             =>  'edit_theme_options',
+        'sanitize_callback'      =>  'sanitize_text_field'
+    ));
+
+    $wp_customize->add_control( 'cherry_biz_contact_shortcode', array(
+        'type'                  => 'text',
+        'label'                 => esc_html__('Contact Form 7 ShortCode', 'cherry-biz'),
+        'section'               => 'cherry_biz_contact_page_section',
+        'settings'              => 'cherry_biz_contact_shortcode'
+    ) );
 
     //sanitize checkbox function
     function cherry_biz_checkbox_sanitize( $input )
@@ -97,6 +126,18 @@ function cherry_biz_customize_register($wp_customize)
             return intval( $input );
         }
     }
+
+    function cherry_biz_sanitize_googlemaps($input)
+    {
+        global $cherry_biz_allowedposttags;
+        $cherry_biz_allowedposttags_iframe = cherry_biz_map_allowed_tags($cherry_biz_allowedposttags);
+
+        $output = wp_kses( $input, $cherry_biz_allowedposttags_iframe);
+        return $output;
+    }
+
+
+
 }
 add_action('customize_register', 'cherry_biz_customize_register');
 
