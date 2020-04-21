@@ -17,7 +17,7 @@ $wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'ch
     'section'		        => 'cherry_biz_top_bar_section',
     'priority' => 1,
     'label'			        => esc_html__( 'Topbar Section', 'cherry-biz' ),
-    'description'			=> esc_html__( 'You can edit text and enable social links and search.', 'cherry-biz' )
+    'description'			=> esc_html__( 'You can edit text and enable/disable social links and search.', 'cherry-biz' )
 )));
 
 $wp_customize->add_setting('cherry_biz_search_checkbox', [

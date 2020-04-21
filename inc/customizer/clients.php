@@ -5,9 +5,20 @@
  */
 $wp_customize->add_section('cherry_biz_clients_section', [
     'priority' => 20,
-    'title' => esc_html__('Clients', 'cherry-biz'),
+    'title' => esc_html__('Client', 'cherry-biz'),
     'panel'    => 'cherry_biz_front_page_options'
 ]);
+
+$wp_customize->add_setting( 'cherry_biz_clients_heading_', array(
+    'sanitize_callback'	     =>  'cherry_biz_sanitize_text',
+) );
+$wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_clients_heading_', array(
+    'settings'		        => 'cherry_biz_clients_heading_',
+    'section'		        => 'cherry_biz_clients_section',
+    'priority' => 1,
+    'label'			        => esc_html__( 'Client Section', 'cherry-biz' ),
+    'description'			=> esc_html__( 'You can Enable/Disable Client section. Input client name and upload client logo. Logo can be changed and removed easily.', 'cherry-biz' )
+)));
 
 $wp_customize->add_setting('cherry_biz_clients_checkbox', [
     'default' => '',
@@ -28,7 +39,7 @@ for ($counter = 0; $counter < cherry_biz_config('clients_limit'); $counter++) {
         'sanitize_callback'	     =>  'cherry_biz_sanitize_text'
     ) );
 
-    $wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_clients_heading_'.$counter, array(
+    $wp_customize->add_control( new Cherry_Biz_Customize_Title( $wp_customize, 'cherry_biz_clients_heading_'.$counter, array(
         'settings'		        => 'cherry_biz_clients_heading_'.$counter,
         'section'		        => 'cherry_biz_clients_section',
         'label'			        => esc_html__( 'Client', 'cherry-biz' ).' '.($counter +1)

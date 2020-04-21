@@ -5,9 +5,20 @@
  */
 $wp_customize->add_section('cherry_biz_our_story_section', [
     'priority' => 30,
-    'title' => esc_html__('Our Story', 'cherry-biz'),
+    'title' => esc_html__('Story', 'cherry-biz'),
     'panel'    => 'cherry_biz_front_page_options'
 ]);
+
+$wp_customize->add_setting( 'cherry_biz_story_heading_', array(
+    'sanitize_callback'	     =>  'cherry_biz_sanitize_text',
+) );
+$wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_story_heading_', array(
+    'settings'		        => 'cherry_biz_story_heading_',
+    'section'		        => 'cherry_biz_our_story_section',
+    'priority' => 1,
+    'label'			        => esc_html__( 'Story Section', 'cherry-biz' ),
+    'description'			=> esc_html__( 'You can Enable/Disable Story section. Input Section Title only. You can select page to show Story/About us.', 'cherry-biz' )
+)));
 
 $wp_customize->add_setting('cherry_biz_our_story_checkbox', [
     'default' => '',

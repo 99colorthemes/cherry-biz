@@ -5,10 +5,20 @@
  */
 $wp_customize->add_section('cherry_biz_projects_section', [
     'priority' => 30,
-    'title' => esc_html__('Our Projects', 'cherry-biz'),
+    'title' => esc_html__('Project', 'cherry-biz'),
     'panel'    => 'cherry_biz_front_page_options'
 ]);
 
+$wp_customize->add_setting( 'cherry_biz_project_heading_', array(
+    'sanitize_callback'	     =>  'cherry_biz_sanitize_text',
+) );
+$wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_project_heading_', array(
+    'settings'		        => 'cherry_biz_project_heading_',
+    'section'		        => 'cherry_biz_projects_section',
+    'priority' => 1,
+    'label'			        => esc_html__( 'Project Section', 'cherry-biz' ),
+    'description'			=> esc_html__( 'You can Enable/Disable Project section. Input Section Title and Sub-title. You can choose category for Project.', 'cherry-biz' )
+)));
 
 $wp_customize->add_setting('cherry_biz_projects_checkbox', [
     'default' => '',

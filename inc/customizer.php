@@ -84,6 +84,17 @@ function cherry_biz_customize_register($wp_customize)
         'priority'           =>  3,
     ]);
 
+    $wp_customize->add_setting( 'cherry_biz_contact_page_heading_', array(
+        'sanitize_callback'	     =>  'cherry_biz_sanitize_text',
+    ) );
+    $wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_contact_page_heading_', array(
+        'settings'		        => 'cherry_biz_contact_page_heading_',
+        'section'		        => 'cherry_biz_contact_page_section',
+        'priority' => 1,
+        'label'			        => esc_html__( 'Contact Section', 'cherry-biz' ),
+        'description'			=> esc_html__( 'Add iframe of Google Map and shortcode of Contact Form 7', 'cherry-biz' )
+    )));
+
     $wp_customize->add_setting( 'cherry_biz_contact_map', array(
         'default'               =>  '',
         'capability'            =>  'edit_theme_options',
@@ -94,7 +105,8 @@ function cherry_biz_customize_register($wp_customize)
         'type'                  =>  'textarea',
         'label'                 =>  esc_html__('Contact Map', 'cherry-biz'),
         'section'               =>  'cherry_biz_contact_page_section',
-        'settings'              =>  'cherry_biz_contact_map'
+        'settings'              =>  'cherry_biz_contact_map',
+        'description'			=> esc_html__( 'Embed a map', 'cherry-biz' )
     ));
 
     $wp_customize->add_setting( 'cherry_biz_contact_shortcode', array(

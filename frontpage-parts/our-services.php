@@ -33,7 +33,7 @@ if($cherry_biz_our_services_checkbox) :
                     <div class="card nnc-card text-center">
                         <div class="card-body">
                             <div class="nnc-f__icon">
-                                <i class="<?php echo esc_attr(get_theme_mod('cherry_biz_our_services_icon_'.$counter)); ?>"></i>
+                                <i class="fas fa-<?php echo esc_attr(get_theme_mod('cherry_biz_our_services_icon_'.$counter)); ?>"></i>
                             </div>
                             <h4 class="nnc-f__title">
                                 <a href="<?php echo esc_url($page->guid); ?>" class="">

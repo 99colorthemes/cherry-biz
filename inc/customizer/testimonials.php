@@ -5,9 +5,20 @@
  */
 $wp_customize->add_section('cherry_biz_testimonials_section', [
     'priority' => 30,
-    'title' => esc_html__('Our Testimonials', 'cherry-biz'),
+    'title' => esc_html__('Testimonial', 'cherry-biz'),
     'panel'    => 'cherry_biz_front_page_options'
 ]);
+
+$wp_customize->add_setting( 'cherry_biz_testimonials_heading_', array(
+    'sanitize_callback'	     =>  'cherry_biz_sanitize_text',
+) );
+$wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_testimonials_heading_', array(
+    'settings'		        => 'cherry_biz_testimonials_heading_',
+    'section'		        => 'cherry_biz_testimonials_section',
+    'priority' => 1,
+    'label'			        => esc_html__( 'Testimonial Section', 'cherry-biz' ),
+    'description'			=> esc_html__( 'You can Enable/Disable Testimonial section. Input Section Title and Sub-title. You can choose category for Testimonial.', 'cherry-biz' )
+)));
 
 $wp_customize->add_setting('cherry_biz_testimonials_checkbox', [
     'default' => '',
