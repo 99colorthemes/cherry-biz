@@ -3,7 +3,7 @@ Contributors: 99colorthemes
 Tags: one-column, flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Tested up to: WordPress 5.3.2
 Requires PHP: 5.6
-Stable tag:  1.1.0
+Stable tag:  1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,7 +48,7 @@ Cherry Biz is modern style free responsive Business WordPress Theme. Cherry Biz 
 
 == CHANGE LOG ==
 
-= Version 1.1.0 =
+= Version 1.0.1 =
 * Bug Fixes
 * Design Fixes
 
