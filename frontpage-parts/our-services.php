@@ -40,7 +40,7 @@ if($cherry_biz_our_services_checkbox) :
                                     <?php echo esc_html($page->post_title); ?>
                                 </a>
                             </h4>
-                            <div class="nnc-service__content"><p><?php echo esc_html(wp_trim_words($page->post_excerpt, cherry_biz_config('services_page_excerpt_limit'))); ?></p>
+                            <div class="nnc-service__content"><p><?php echo esc_html($page->post_excerpt); ?></p>
                             </div>
                         </div>
                     </div>

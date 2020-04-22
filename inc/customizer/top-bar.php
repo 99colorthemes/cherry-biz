@@ -9,11 +9,11 @@ $wp_customize->add_section('cherry_biz_top_bar_section', [
     'panel' => 'cherry_biz_general_options',
 ]);
 
-$wp_customize->add_setting( 'cherry_biz_topbar_heading_', array(
+$wp_customize->add_setting( 'cherry_biz_topbar_heading', array(
     'sanitize_callback'	     =>  'cherry_biz_sanitize_text',
 ) );
-$wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_topbar_heading_', array(
-    'settings'		        => 'cherry_biz_topbar_heading_',
+$wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_topbar_heading', array(
+    'settings'		        => 'cherry_biz_topbar_heading',
     'section'		        => 'cherry_biz_top_bar_section',
     'priority' => 1,
     'label'			        => esc_html__( 'Topbar Section', 'cherry-biz' ),

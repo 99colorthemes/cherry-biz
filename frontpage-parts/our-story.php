@@ -27,10 +27,12 @@ if($cherry_biz_our_story_page_id && $cherry_biz_our_story_checkbox) :
                         <h2 class="nnc-section__subtitle"><?php echo esc_html($page->post_title); ?></h2>
                     </div>
                     <div class="nnc-about__desc">
-                        <p><?php echo esc_html(wp_trim_words($page->post_excerpt, cherry_biz_config('story_page_excerpt_limit'))); ?></p>
+                        <p><?php echo esc_html($page->post_excerpt); ?></p>
                     </div>
                     <div class="mt-4">
-                        <a href="<?php echo esc_url($page->guid); ?>" class="btn btn--primary">Read More</a>
+                        <a href="<?php echo esc_url($page->guid); ?>" class="btn btn--primary">
+                            <?php echo esc_html__('Read More', 'cherry-biz') ?>
+                        </a>
                     </div>
                 </div>
             </div>

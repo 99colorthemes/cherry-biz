@@ -36,12 +36,12 @@ $wp_customize->add_control('cherry_biz_our_slider_checkbox', [
 
 for ($counter = 0; $counter < cherry_biz_config('slider_limit'); $counter++) {
 
-    $wp_customize->add_setting( 'cherry_biz_slider_heading_'.$counter, array(
+    $wp_customize->add_setting( 'cherry_biz_slider_heading_title_'.$counter, array(
         'sanitize_callback'	     =>  'cherry_biz_sanitize_text'
     ) );
 
-    $wp_customize->add_control( new Cherry_Biz_Customize_title( $wp_customize, 'cherry_biz_slider_heading_'.$counter, array(
-        'settings'		        => 'cherry_biz_slider_heading_'.$counter,
+    $wp_customize->add_control( new Cherry_Biz_Customize_title( $wp_customize, 'cherry_biz_slider_heading_title_'.$counter, array(
+        'settings'		        => 'cherry_biz_slider_heading_title_'.$counter,
         'section'		        => 'cherry_biz_slider_section',
         'label'			        => esc_html__( 'Slider', 'cherry-biz' ).' '.($counter +1)
     ) ) );

@@ -15,7 +15,7 @@ $wp_customize->add_setting( 'cherry_biz_blogs_heading_', array(
 $wp_customize->add_control( new Cherry_Biz_Customize_Heading( $wp_customize, 'cherry_biz_blogs_heading_', array(
     'settings'		        => 'cherry_biz_blogs_heading_',
     'section'		        => 'cherry_biz_blogs_section',
-    'priority' => 1,
+    'priority'               => 1,
     'label'			        => esc_html__( 'Blog Section', 'cherry-biz' ),
     'description'			=> esc_html__( 'You can Enable/Disable Blog section. Input Section Title and Sub-title. You can choose category for Blog.', 'cherry-biz' )
 )));
