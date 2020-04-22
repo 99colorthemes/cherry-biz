@@ -25,44 +25,46 @@ if($cherry_biz_testimonials_category && $cherry_biz_testimonials_checkbox) :
         </div>
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-10 col-lg-8">
-                <div class="swiper-container nnc-testimonial-container">
-                    <div class="swiper-wrapper">
-                    <?php
-                        if($cherry_biz_testimonials->have_posts()) :
-                            while ($cherry_biz_testimonials->have_posts()):$cherry_biz_testimonials->the_post();
-                            $tags = get_the_tags();
-                    ?>
-                        <div class="swiper-slide">
-                            <div class="nnc-testimonial__item">
-                                <i class="fas fa-quote-left nnc-icon--xl"></i>
-                                <div class="nnc-testimonial__content">
-                                    <?php the_content(); ?>
-                                </div>
-                                <div class="nn-testomonial__client">
-                                    <h5 class="nnc-testimonial__client-name"><?php the_title(); ?></h5>
-                                    <span class="nnc-testimonial__client-designation">
-                                        <?php
-                                            $output = '';
-                                            foreach ($tags as $key => $tag) {
-                                                $output .= $tag->name;
+                <div class="nnc-testimonial--block">
+                    <div class="swiper-container nnc-testimonial-container">
+                        <div class="swiper-wrapper">
+                        <?php
+                            if($cherry_biz_testimonials->have_posts()) :
+                                while ($cherry_biz_testimonials->have_posts()):$cherry_biz_testimonials->the_post();
+                                $tags = get_the_tags();
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="nnc-testimonial__item">
+                                    <i class="fas fa-quote-left nnc-icon--xl"></i>
+                                    <div class="nnc-testimonial__content">
+                                        <?php the_content(); ?>
+                                    </div>
+                                    <div class="nn-testomonial__client">
+                                        <h5 class="nnc-testimonial__client-name"><?php the_title(); ?></h5>
+                                        <span class="nnc-testimonial__client-designation">
+                                            <?php
+                                                $output = '';
+                                                foreach ($tags as $key => $tag) {
+                                                    $output .= $tag->name;
 
-                                                if(count($tag) != ($key + 1)) {
-                                                    $output .= ' / ';
+                                                    if(count($tag) != ($key + 1)) {
+                                                        $output .= ' / ';
+                                                    }
                                                 }
-                                            }
-                                            echo $output;
-                                        ?>
-                                    </span>
+                                                echo $output;
+                                            ?>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php
-                            endwhile;
-                        endif;
-                    ?>
+                        <?php
+                                endwhile;
+                            endif;
+                        ?>
 
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>

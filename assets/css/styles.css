@@ -331,7 +331,7 @@
 }
 
 .nnc-about {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-color: #f8f8f8;
 }
 
 .nnc-about__img {
@@ -351,6 +351,11 @@
 
 .nnc-about__desc p {
   margin-bottom: 0;
+}
+
+.nnc-product {
+  background: white;
+  background: linear-gradient(360deg, white 0%, #eeeeee 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.8) 100%);
 }
 
 .nnc-product__item {
@@ -406,8 +411,13 @@
   margin-top: 1rem;
 }
 
-.nnc-testimonial {
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+.nnc-testimonial--block {
+  position: relative;
+}
+
+.nnc-testimonial-container {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
 }
 
 .nnc-testimonial-container .swiper-pagination {
@@ -439,7 +449,7 @@
 }
 
 .nnc-blog {
-  background-color: #f3f3f3;
+  background-color: #f8f8f8;
 }
 
 .nnc-blog__title {
@@ -467,11 +477,12 @@
 }
 
 .nnc-footer {
-  background-color: #f3f3f3;
+  padding-top: 3rem;
+  background-color: #fff;
 }
 
 .nnc-footer-bottom {
-  background-color: #fff;
+  border-top: 1px solid #f3f3f3;
 }
 
 .nnc-scroll-top {
@@ -501,6 +512,28 @@
   right: 15px;
   visibility: visible;
   transition: all 300ms ease-in-out;
+}
+
+.nnc-footer__block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nnc-footer__item {
+  width: calc(25% - 30px);
+}
+
+@media only screen and (max-width: 991px) {
+  .nnc-footer__item {
+    width: calc(50% - 30px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nnc-footer__item {
+    width: 100%;
+  }
 }
 
 .nnc-map {
@@ -557,7 +590,7 @@ h2.widget-title {
 }
 
 .widget li {
-  padding: 12px 0;
+  padding: 8px 0;
   position: relative;
 }
 
@@ -1052,37 +1085,6 @@ ol.comment-list {
   color: #fb2056;
 }
 
-.nnc-footer {
-  padding-top: 3rem;
-  background-color: #fff;
-}
-
-.nnc-footer__block {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.nnc-footer__item {
-  width: calc(25% - 30px);
-}
-
-@media only screen and (max-width: 991px) {
-  .nnc-footer__item {
-    width: calc(50% - 30px);
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .nnc-footer__item {
-    width: 100%;
-  }
-}
-
-.footer-bottom {
-  background-color: #f3f3f3;
-}
-
 .nnc-content-area {
   background-color: #fff;
   padding: 1.875rem;
@@ -1097,7 +1099,7 @@ ol.comment-list {
   box-shadow: 0 3px 4px 0 #eee;
 }
 
-.comments-area .form-submit,
+.widget li .comments-area .form-submit,
 .comments-area .form-submit .submit {
   margin: 0;
 }
@@ -1113,12 +1115,6 @@ article .entry-summary p {
 p {
   line-height: 2;
   font-size: 16px;
-}
-
-@media only screen and (max-width: 1400px) {
-  p {
-    font-size: 14px;
-  }
 }
 
 a {

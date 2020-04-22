@@ -52,7 +52,7 @@
 
 
 
-<footer class="nnc-footer-bottom footer-bottom pt-3 pb-3">
+<footer class="nnc-footer-bottom pt-3 pb-3">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 d-flex align-items-center justify-content-center">
