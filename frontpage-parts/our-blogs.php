@@ -31,7 +31,7 @@ if($cherry_biz_blogs_category && $cherry_biz_blogs_checkbox) :
         if($cherry_biz_blogs->have_posts()) :
             while ($cherry_biz_blogs->have_posts()):$cherry_biz_blogs->the_post();
             ?>
-            <div class="col-md-6 col-lg-4 d-flex">
+            <div class="col-md-12 col-lg-4 d-flex">
                 <div class="card nnc-card o-h">
                     <?php if (has_post_thumbnail()) : ?>
                         <div class="nnc-product__img">

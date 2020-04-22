@@ -32,7 +32,7 @@ if($cherry_biz_projects_category && $cherry_biz_projects_checkbox) :
                     while ($cherry_biz_projects->have_posts()):$cherry_biz_projects->the_post();
                     $tags = get_the_tags();
                 ?>
-                <div class="col-md-3">
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="nnc-product__item">
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="nnc-product__img">

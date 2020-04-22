@@ -36,6 +36,7 @@ if($cherry_biz_our_slider_checkbox) :
                     endif;
                 } ?>
         </div>
+        <div class="swiper-pagination-hero"></div>
     </div>
     <div class="nnc-hero--bg"><img src="http://localhost:8888/cherry-biz/wp-content/uploads/2020/04/white-bg-1.png" alt="white-bg"></div>
 </section>

@@ -24,7 +24,7 @@ if($cherry_biz_testimonials_category && $cherry_biz_testimonials_checkbox) :
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-8">
+            <div class="col-sm-12 col-md-10 col-lg-8">
                 <div class="swiper-container nnc-testimonial-container">
                     <div class="swiper-wrapper">
                     <?php

@@ -11,7 +11,7 @@ if($cherry_biz_our_story_page_id && $cherry_biz_our_story_checkbox) :
 <section class="nnc-about nnc-s-padd">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-12 col-lg-6">
+            <div class="col-md-6 col-lg-6">
                 <div class="nnc-about__img">
                     <?php
                         if(has_post_thumbnail($cherry_biz_our_story_page_id)) {
@@ -20,7 +20,7 @@ if($cherry_biz_our_story_page_id && $cherry_biz_our_story_checkbox) :
                     ?>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-6">
+            <div class="col-md-6 col-lg-6">
                 <div class="nnc-about__content">
                     <div class="nnc-section text-left pb-3">
                         <h6 class="nnc-section__title"><?php echo esc_html($cherry_biz_our_story_title); ?></h6>

@@ -8,7 +8,7 @@ if($cherry_biz_our_services_checkbox) :
 
 ?>
 
-<section class="nnc-f bg-white nnc-s-padd">
+<section class="nnc-service bg-white nnc-s-padd">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -29,18 +29,18 @@ if($cherry_biz_our_services_checkbox) :
                     $page = get_post($pageId);
             ?>
 
-                <div class="col-md-6 col-lg-4 d-flex">
+                <div class="col-md-12 col-lg-4 d-flex nnc-service__item">
                     <div class="card nnc-card text-center">
                         <div class="card-body">
-                            <div class="nnc-f__icon">
+                            <div class="nnc-service__icon">
                                 <i class="fas fa-<?php echo esc_attr(get_theme_mod('cherry_biz_our_services_icon_'.$counter)); ?>"></i>
                             </div>
-                            <h4 class="nnc-f__title">
+                            <h4 class="nnc-service__title">
                                 <a href="<?php echo esc_url($page->guid); ?>" class="">
                                     <?php echo esc_html($page->post_title); ?>
                                 </a>
                             </h4>
-                            <div class="nnc-f__content"><p><?php echo esc_html(wp_trim_words($page->post_excerpt, cherry_biz_config('services_page_excerpt_limit'))); ?></p>
+                            <div class="nnc-service__content"><p><?php echo esc_html(wp_trim_words($page->post_excerpt, cherry_biz_config('services_page_excerpt_limit'))); ?></p>
                             </div>
                         </div>
                     </div>

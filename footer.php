@@ -87,7 +87,7 @@
     </div>
 </footer>
 
-<button role="button" class="nnc-scroll-top transition">
+<button role="button" class="nnc-scroll-top">
     <i class="fas fa-angle-up"></i>
 </button>
 

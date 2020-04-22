@@ -1,9 +1,10 @@
 .btn {
   color: #fff;
-  padding: 0.9rem 2.2rem;
+  padding: 0.9rem 2rem;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #ee043e;
   color: #fff;
   border: 1px solid transparent;
@@ -28,6 +29,10 @@
 }
 
 .nnc-topbar__info ul li {
+  color: #fff;
+}
+
+.nnc-topbar__social ul li a {
   color: #fff;
 }
 
@@ -160,52 +165,9 @@
   margin-left: 1.6rem;
 }
 
-.nnc-footer {
-  background-color: #f3f3f3;
-}
-
-.nnc-footer-bottom {
-  background-color: #fff;
-}
-
-.nnc-scroll-top {
-  position: fixed;
-  right: -20px;
-  bottom: 15px;
-  z-index: 111;
-  opacity: 0;
-  visibility: hidden;
-  background: #fb2056;
-  width: 46px;
-  height: 46px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-}
-
-.nnc-scroll-top:hover {
-  background-color: #ee043e;
-}
-
-.nnc-scroll-top.show {
-  opacity: 1;
-  right: 15px;
-  visibility: visible;
-  transition: all 400ms ease-in-out;
-}
-
 .nnc-hero,
 .nnc-testimonial {
   position: relative;
-}
-
-.nnc-hero .swiper-pagination-hero.swiper-pagination-clickable.swiper-pagination-bullets,
-.nnc-testimonial .swiper-pagination-hero.swiper-pagination-clickable.swiper-pagination-bullets {
-  bottom: 36px;
-  left: 0;
-  width: 100%;
 }
 
 .nnc-hero .swiper-pagination-clickable .swiper-pagination-bullet,
@@ -218,6 +180,7 @@
 .nnc-testimonial .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #fb2056;
   width: 40px;
+  border-radius: 2px;
   outline: none;
   transition: all 300ms ease-in-out;
 }
@@ -244,7 +207,15 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 999;
+  z-index: 9;
+}
+
+.nnc-hero-slider-container {
+  z-index: initial;
+}
+
+.nnc-hero-slider-container .swiper-pagination-hero {
+  bottom: 180px;
 }
 
 .nnc-banner {
@@ -260,6 +231,7 @@
   padding: 2rem;
   border-radius: 3px;
   text-align: center;
+  margin-bottom: 6rem;
 }
 
 .nnc-banner__title {
@@ -298,11 +270,11 @@
           filter: grayscale(1);
 }
 
-.nnc-f {
+.nnc-service {
   padding-top: 0 !important;
 }
 
-.nnc-f__icon {
+.nnc-service__icon {
   width: 74px;
   height: 74px;
   border-radius: 500rem;
@@ -313,39 +285,35 @@
   background-color: #fb2056;
 }
 
-.nnc-f__icon > i {
+.nnc-service__icon > i {
   color: #fff;
   font-size: 2rem;
 }
 
-.nnc-f__title {
+.nnc-service__title {
   padding-top: 1.4rem;
   margin: 0;
 }
 
-.nnc-f__title > a {
+.nnc-service__title > a {
   color: #000;
 }
 
-.nnc-f__content {
+.nnc-service__content {
   padding-top: 1rem;
   color: #999;
   line-height: 2;
 }
 
-.nnc-f__content p {
+.nnc-service__content p {
   margin-bottom: 0;
 }
 
-.nnc-f .nnc-card {
+.nnc-service .nnc-card {
   margin-top: 2rem;
 }
 
-.nnc-f .nnc-card:first-child {
-  margin-top: 0;
-}
-
-.nnc-f .nnc-card .card-body {
+.nnc-service .nnc-card .card-body {
   padding: 4rem 2rem;
 }
 
@@ -353,7 +321,7 @@
   width: 100%;
   border: none;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+  border-radius: 0.25rem;
   transition: all 300ms ease-in-out;
 }
 
@@ -370,6 +338,12 @@
   margin-right: 1rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .nnc-about__img {
+    margin-bottom: 2rem;
+  }
+}
+
 .nnc-about__desc {
   color: #999;
   line-height: 2;
@@ -381,7 +355,7 @@
 
 .nnc-product__item {
   position: relative;
-  border-radius: 12px;
+  border-radius: 0.25rem;
   overflow: hidden;
   margin-bottom: 30px;
   transition: all 300ms ease-in-out;
@@ -436,10 +410,14 @@
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
+.nnc-testimonial-container .swiper-pagination {
+  bottom: 32px;
+}
+
 .nnc-testimonial__item {
   text-align: center;
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 0.25rem;
   padding: 2rem 3rem 4rem 3rem;
 }
 
@@ -486,6 +464,43 @@
 .nnc-blog__date span {
   padding-right: 0.7rem;
   text-transform: capitalize;
+}
+
+.nnc-footer {
+  background-color: #f3f3f3;
+}
+
+.nnc-footer-bottom {
+  background-color: #fff;
+}
+
+.nnc-scroll-top {
+  position: fixed;
+  right: -20px;
+  bottom: 15px;
+  z-index: 111;
+  opacity: 0;
+  visibility: hidden;
+  background: #fb2056;
+  width: 46px;
+  height: 46px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: all 300ms ease-in-out;
+}
+
+.nnc-scroll-top:hover {
+  background-color: #ee043e;
+}
+
+.nnc-scroll-top.show {
+  opacity: 1;
+  right: 15px;
+  visibility: visible;
+  transition: all 300ms ease-in-out;
 }
 
 .nnc-map {
