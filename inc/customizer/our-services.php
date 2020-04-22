@@ -60,12 +60,12 @@ $wp_customize->add_control( 'cherry_biz_our_services_sub_title', array(
 
 for ($counter = 0; $counter < cherry_biz_config('services_limit'); $counter++) {
 
-    $wp_customize->add_setting( 'cherry_biz_our_services_heading_'.$counter, array(
+    $wp_customize->add_setting( 'cherry_biz_our_services_heading_title_'.$counter, array(
         'sanitize_callback'	     =>  'cherry_biz_sanitize_text'
     ) );
 
-    $wp_customize->add_control( new Cherry_Biz_Customize_Title( $wp_customize, 'cherry_biz_our_services_heading_'.$counter, array(
-        'settings'		        => 'cherry_biz_our_services_heading_'.$counter,
+    $wp_customize->add_control( new Cherry_Biz_Customize_Title( $wp_customize, 'cherry_biz_our_services_heading_title_'.$counter, array(
+        'settings'		        => 'cherry_biz_our_services_heading_title_'.$counter,
         'section'		        => 'cherry_biz_our_services_section',
         'label'			        => esc_html__( 'Service', 'cherry-biz' ).' '.($counter +1)
     ) ) );

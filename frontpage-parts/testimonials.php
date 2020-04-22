@@ -4,14 +4,7 @@ $cherry_biz_testimonials_sub_title = get_theme_mod('cherry_biz_testimonials_sub_
 $cherry_biz_testimonials_category = get_theme_mod('cherry_biz_testimonials_category');
 $cherry_biz_testimonials_checkbox = get_theme_mod('cherry_biz_testimonials_checkbox');
 
-if($cherry_biz_testimonials_category && $cherry_biz_testimonials_checkbox) :
-
-    $cherry_biz_testimonials = new WP_Query(array(
-        'posts_per_page' =>  cherry_biz_config('testimonials_limit'),
-        'post_type'      =>  'post',
-        'category__in'   =>  $cherry_biz_testimonials_category
-    ));
-
+if($cherry_biz_testimonials_checkbox) :
 ?>
     <section class="nnc-testimonial nnc-s-padd">
     <div class="container">
@@ -28,9 +21,17 @@ if($cherry_biz_testimonials_category && $cherry_biz_testimonials_checkbox) :
                 <div class="swiper-container nnc-testimonial-container">
                     <div class="swiper-wrapper">
                     <?php
-                        if($cherry_biz_testimonials->have_posts()) :
-                            while ($cherry_biz_testimonials->have_posts()):$cherry_biz_testimonials->the_post();
-                            $tags = get_the_tags();
+
+                        if($cherry_biz_testimonials_category) :
+                            $cherry_biz_testimonials = new WP_Query(array(
+                                'posts_per_page' =>  cherry_biz_config('testimonials_limit'),
+                                'post_type'      =>  'post',
+                                'category__in'   =>  $cherry_biz_testimonials_category
+                            ));
+
+                            if($cherry_biz_testimonials->have_posts()) :
+                                while ($cherry_biz_testimonials->have_posts()):$cherry_biz_testimonials->the_post();
+                                $tags = get_the_tags();
                     ?>
                         <div class="swiper-slide">
                             <div class="nnc-testimonial__item">
@@ -57,7 +58,8 @@ if($cherry_biz_testimonials_category && $cherry_biz_testimonials_checkbox) :
                             </div>
                         </div>
                     <?php
-                            endwhile;
+                                endwhile;
+                            endif;
                         endif;
                     ?>
 

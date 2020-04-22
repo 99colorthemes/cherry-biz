@@ -1,34 +1,11 @@
 /*
  * customizer layout animated border style
  */
-#cherry-biz-img-container .cherry-biz-radio-img-img {
-	border: 3px solid #DEDEDE;
-	margin: 0 5px 5px 0;
-	cursor: pointer;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-}
-#cherry-biz-img-container .cherry-biz-radio-img-selected {
-	border: 3px solid #AAA;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-}
+
 input[type=checkbox]:before {
 	content: '';
 	margin: -3px 0 0 -4px;
 }
-
-/*.cherry-biz-accordion-section-title {*/
-	/*color: #fff;*/
-	/*padding: 6px 10px 8px 14px ;*/
-	/*background-color: #666;*/
-	/*border-bottom: 1px solid #eee;*/
-	/*border-top: 1px solid #eee;*/
-	/*line-height: 21px;*/
-	/*margin: 0 -12px 0;*/
-/*}*/
 
 .cherry-biz-accordion-section-title {
 	color: #444;
@@ -68,14 +45,4 @@ input[type=checkbox]:before {
 
 ul.accordion-section li:nth-child(2) {
 	margin-bottom: 0;
-}
-
-#sub-accordion-section-cherry_biz_clients_section li div div .attachment-thumb {
-	width: 44px;
-}
-
-#sub-accordion-section-cherry_biz_clients_section li div.attachment-media-view.attachment-media-view-image.landscape {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 }

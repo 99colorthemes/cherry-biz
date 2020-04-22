@@ -30,26 +30,6 @@ function cherry_biz_customize_register($wp_customize)
     }
 
     /**
-     * Homepage Sidebar
-     */
-    $wp_customize->add_section('cherry_biz_homepage_sidebar_section', [
-        'priority' => 5,
-        'title' => esc_html__('Homepage Sidebar', 'cherry-biz'),
-        'panel' => 'cherry_biz_general_options'
-    ]);
-    $wp_customize->add_setting('cherry_biz_homepage_sidebar', [
-        'default' => '',
-        'capability' => 'edit_theme_options',
-        'sanitize_callback' => 'cherry_biz_checkbox_sanitize'
-    ]);
-    $wp_customize->add_control('cherry_biz_homepage_sidebar', [
-        'type' => 'checkbox',
-        'label' => esc_html__('Homepage Sidebar', 'cherry-biz'),
-        'settings' => 'cherry_biz_homepage_sidebar',
-        'section' => 'cherry_biz_homepage_sidebar_section'
-    ]);
-
-    /**
      * Theme Option Panel
      */
     $wp_customize->add_panel( 'cherry_biz_front_page_options', array(
