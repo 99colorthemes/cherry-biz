@@ -24,10 +24,21 @@ Cherry Biz is modern style free responsive Business WordPress Theme. Cherry Biz 
    Copyright 2011-2018 Twitter, Inc.
    Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
+== JS ==
+1. Swiper (https://swiperjs.com/)
+    Licensed under MIT
+    2020 © Swiper by Vladimir Kharlampidi
+2. AOS (https://michalsnik.github.io/aos/)
+    Licensed under MIT (https://github.com/michalsnik/aos/blob/next/LICENSE)
+    Copyright 2015 AOS by Michał Sajnóg
+
 == Google Fonts ==
-1. Josefin Sans (https://fonts.google.com/specimen/Josefin+Sans)
+1. Playfair Display (https://fonts.google.com/specimen/Playfair+Display)
    Licensed under Open Font License
-   Copyright © Santiago Orozco
+   Copyright © Claus Eggers Sørense
+2. Roboto (https://fonts.google.com/specimen/Roboto)
+   Licensed under Open Font License
+   Copyright © Christian Robertson
 
 == Fonts ==
 1. Font Awesome: - http://fontawesome.io/
@@ -40,13 +51,14 @@ Cherry Biz is modern style free responsive Business WordPress Theme. Cherry Biz 
 2. https://stocksnap.io/photo/ZU3GBGBBQP - By Kristin Hardwick
     (License: CC0 - https://stocksnap.io/license)
 
-    
-
 == Plugins ==
 1. TGM-Plugin-Activation: - https://github.com/TGMPA/TGM-Plugin-Activation
    Licensed under the GNU General Public License v2.0
 
 == CHANGE LOG ==
 
-= Version 1.0 =
+= Version 1.0.1 =
+*
+
+= Version 1.0.0 =
 * All brand new.

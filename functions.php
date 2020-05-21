@@ -177,19 +177,21 @@ add_action('widgets_init', 'cherry_biz_widgets_init');
  */
 function cherry_biz_scripts()
 {
-    wp_enqueue_style('bootstrap-reboot', get_template_directory_uri() . '/assets/css/bootstrap-reboot.css');
-
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css');
 
     wp_enqueue_style('Font Awesome', get_template_directory_uri() . '/assets/css/all.css');
 
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper.css');
 
+    wp_enqueue_style('aos', get_template_directory_uri() . '/assets/css/aos.css');
+
     wp_enqueue_style('cherry-biz-styles-css', get_template_directory_uri() . '/assets/css/styles.css');
 
     wp_enqueue_style('cherry-biz-style', get_stylesheet_uri());
 
     wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/swiper.js', [], '', true);
+
+    wp_enqueue_script('aos', get_template_directory_uri() . '/assets/js/aos.js', [], '', true);
 
     wp_enqueue_script('cherry-biz-navigation', get_template_directory_uri() . '/js/navigation.js', [], '20151215', true);
 
