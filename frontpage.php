@@ -1,7 +1,7 @@
 <?php
 /**
  * The main template file
- * Template Name: Front Page
+ * Template Name: Home Page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

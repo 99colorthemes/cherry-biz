@@ -537,7 +537,11 @@
 }
 
 .nnc-map {
-  margin-bottom: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.nnc-map h2 {
+  margin-bottom: 0;
 }
 
 .nnc-map iframe {
@@ -653,11 +657,6 @@ h2.widget-title {
   margin: 0;
 }
 
-.entry-content p {
-  line-height: 24px;
-  font-size: 15px;
-}
-
 .page .post-thumbnail {
   margin-top: 1rem;
 }
@@ -716,7 +715,12 @@ a.post-edit-link:hover {
 =============================================*/
 
 .entry-meta {
-  margin-top: 18px;
+  margin-top: 0.7rem;
+}
+
+.page .post-thumbnail {
+  margin-top: 1.5rem;
+  display: block;
 }
 
 .nav-links {
@@ -971,7 +975,6 @@ input.submit:hover {
 .entry-title a {
   color: #333;
   text-decoration: none;
-  font-size: 24px;
   line-height: 1.4;
 }
 
@@ -1037,12 +1040,6 @@ input.submit:hover {
   position: absolute;
   left: -1px;
   top: -7px;
-}
-
-.entry-content > p {
-  font-size: 16px;
-  line-height: 1.68;
-  color: #999;
 }
 
 .author a {
@@ -1112,9 +1109,57 @@ article .entry-summary p {
   padding-bottom: 1.4rem;
 }
 
-p {
-  line-height: 2;
-  font-size: 16px;
+.entry-content > * {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+}
+
+.entry-content ol,
+.entry-content ul,
+.entry-content h6 {
+  line-height: 2.4;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3 {
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+.entry-content figure,
+.entry-content hr {
+  margin: 1.6em 0 2em;
+}
+
+.entry-content a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.entry-content a:hover {
+  text-decoration: underline;
+}
+
+.entry-content .tags-links {
+  padding-top: 1.5rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #999;
+}
+
+.entry-content .tags-links a {
+  color: #333;
+  background-color: #f3f3f3;
+  padding: 0.8rem 1rem;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.entry-content .tags-links a:hover {
+  background-color: #fb2056;
+  color: #fff;
 }
 
 a {

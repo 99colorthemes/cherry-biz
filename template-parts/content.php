@@ -30,9 +30,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="mt-3">
-		<?php cherry_biz_post_thumbnail(); ?>
-	</div>
+    <?php cherry_biz_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

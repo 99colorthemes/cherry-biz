@@ -45,13 +45,16 @@ if($cherry_biz_testimonials_checkbox) :
                                     <span class="nnc-testimonial__client-designation">
                                         <?php
                                             $output = '';
-                                            foreach ($tags as $key => $tag) {
-                                                $output .= $tag->name;
-                                                    if(count($tag) != ($key + 1)) {
+                                            if($tags) {
+                                                foreach ($tags as $key => $tag) {
+                                                    $output .= $tag->name;
+                                                    if(count($tags) != ($key + 1)) {
                                                         $output .= ' / ';
                                                     }
                                                 }
-                                                echo $output;
+                                            }
+
+                                            echo $output;
                                             ?>
                                         </span>
                                     </div>

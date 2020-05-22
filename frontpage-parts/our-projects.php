@@ -49,11 +49,13 @@ if($cherry_biz_projects_checkbox) :
                                 <span>
                                     <?php
                                         $output = '';
-                                        foreach ($tags as $key => $tag) {
-                                            $output .= $tag->name;
+                                        if($tags) {
+                                            foreach ($tags as $key => $tag) {
+                                                $output .= $tag->name;
 
-                                            if(count($tag) == ($key + 1)) {
-                                                $output .= ' / ';
+                                                if(count($tags) == ($key + 1)) {
+                                                    $output .= ' / ';
+                                                }
                                             }
                                         }
 
