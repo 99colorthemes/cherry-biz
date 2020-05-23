@@ -185,7 +185,7 @@ function cherry_biz_scripts()
 
     wp_enqueue_style('aos', get_template_directory_uri() . '/assets/css/aos.css');
 
-    wp_enqueue_style('cherry-biz-styles-css', get_template_directory_uri() . '/assets/css/styles.css');
+    wp_enqueue_style('cherry-biz-styles-css', get_template_directory_uri() . '/assets/css/app.css');
 
     wp_enqueue_style('cherry-biz-style', get_stylesheet_uri());
 
