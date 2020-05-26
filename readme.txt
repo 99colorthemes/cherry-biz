@@ -1,9 +1,9 @@
 === Cherry Biz Free Theme ===
 Contributors: 99colorthemes
 Tags: one-column, flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
-Tested up to: WordPress 5.3.2
+Tested up to: WordPress 5.4.1
 Requires PHP: 5.6
-Stable tag:  1.0.1
+Stable tag:  1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,7 +46,7 @@ Cherry Biz is modern style free responsive Business WordPress Theme. Cherry Biz 
    Font Awesome by Dave Gandy - http://fontawesome.io
 
 == Images ==
-1. https://stocksnap.io/photo/ANRQEVKQFG - By Kristin Hardwick
+1. https://stocksnap.io/photo/office-desk-N7FUTW0RY5 - By Bench Accounting
     (License: CC0 - https://stocksnap.io/license)
 2. https://stocksnap.io/photo/ZU3GBGBBQP - By Kristin Hardwick
     (License: CC0 - https://stocksnap.io/license)
@@ -58,7 +58,8 @@ Cherry Biz is modern style free responsive Business WordPress Theme. Cherry Biz 
 == CHANGE LOG ==
 
 = Version 1.0.2 =
-* Added AOS
+* AOS Added
+* Design Fixes
 
 = Version 1.0.1 =
 * Bug Fixes
