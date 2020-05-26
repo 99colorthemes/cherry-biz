@@ -14,8 +14,8 @@ if($cherry_biz_projects_checkbox) :
         <div class="row">
             <div class="col-12">
                 <div class="nnc-section">
-                    <h6 class="nnc-section__title"><?php echo esc_html($cherry_biz_projects_title); ?></h6>
-                    <h2 class="nnc-section__subtitle"><?php echo esc_html($cherry_biz_projects_sub_title); ?></h2>
+                    <h6 class="nnc-section__title" data-aos="fade-up"><?php echo esc_html($cherry_biz_projects_title); ?></h6>
+                    <h2 class="nnc-section__subtitle" data-aos="fade-up"><?php echo esc_html($cherry_biz_projects_sub_title); ?></h2>
                 </div>
             </div>
         </div>
@@ -37,15 +37,15 @@ if($cherry_biz_projects_checkbox) :
                             while ($cherry_biz_projects->have_posts()):$cherry_biz_projects->the_post();
                         $tags = get_the_tags();
                     ?>
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="nnc-product__item">
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="nnc-product__item card nnc-card" data-aos="fade-up">
                             <?php if (has_post_thumbnail()) : ?>
                                 <div class="nnc-product__img">
                                     <?php the_post_thumbnail(); ?>
                                 </div>
                             <?php endif; ?>
                             <div class="nnc-product__content">
-                                <h5><?php the_title(); ?></h5>
+                                <h5 class="mb-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                                 <span>
                                     <?php
                                         $output = '';
@@ -62,7 +62,6 @@ if($cherry_biz_projects_checkbox) :
                                         echo $output;
                                     ?>
                                 </span>
-                                <a href="<?php the_permalink(); ?>" class="nnc-product__link"><i class="fas fa-search"></i></a>
                             </div>
                         </div>
                     </div>

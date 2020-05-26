@@ -13,12 +13,12 @@ if($cherry_biz_blogs_checkbox) :
         <div class="row">
             <div class="col-12">
                 <div class="nnc-section">
-                    <h6 class="nnc-section__title"><?php echo esc_html($cherry_biz_blogs_title); ?></h6>
-                    <h2 class="nnc-section__subtitle"><?php echo esc_html($cherry_biz_blogs_sub_title); ?></h2>
+                    <h6 class="nnc-section__title" data-aos="fade-up"><?php echo esc_html($cherry_biz_blogs_title); ?></h6>
+                    <h2 class="nnc-section__subtitle" data-aos="fade-up"><?php echo esc_html($cherry_biz_blogs_sub_title); ?></h2>
                 </div>
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="row">
 
     <?php
 
@@ -34,7 +34,7 @@ if($cherry_biz_blogs_checkbox) :
                   while ($cherry_biz_blogs->have_posts()):$cherry_biz_blogs->the_post();
             ?>
                 <div class="col-md-12 col-lg-4 d-flex">
-                    <div class="card nnc-card o-h">
+                    <div class="card nnc-card o-h" data-aos="fade-up">
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="nnc-product__img">
                                 <div class="nnc-blog__img">

@@ -11,8 +11,8 @@ if($cherry_biz_testimonials_checkbox) :
         <div class="row">
             <div class="col-12">
                 <div class="nnc-section">
-                    <h6 class="nnc-section__title"><?php echo esc_html($cherry_biz_testimonials_title); ?></h6>
-                    <h2 class="nnc-section__subtitle"><?php echo esc_html($cherry_biz_testimonials_sub_title); ?></h2>
+                    <h6 class="nnc-section__title text-white" data-aos="fade-up"><?php echo esc_html($cherry_biz_testimonials_title); ?></h6>
+                    <h2 class="nnc-section__subtitle text-white" data-aos="fade-up"><?php echo esc_html($cherry_biz_testimonials_sub_title); ?></h2>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@ if($cherry_biz_testimonials_checkbox) :
                                 $tags = get_the_tags();
                     ?>
                         <div class="swiper-slide">
-                            <div class="nnc-testimonial__item">
+                            <div class="nnc-testimonial__item" data-aos="fade-up">
                                 <i class="fas fa-quote-left nnc-icon--xl"></i>
                                 <div class="nnc-testimonial__content">
                                     <?php the_content(); ?>

@@ -15,7 +15,7 @@ if($cherry_biz_clients_checkbox) :
 
                             if($cherry_biz_client_image) :
                     ?>
-                        <div class="nnc-oc__item">
+                        <div class="nnc-oc__item" data-aos="fade-up">
                             <img src="<?php echo esc_url($cherry_biz_client_image); ?>"
                                  alt="<?php echo esc_attr($cherry_biz_client_name); ?>">
                         </div>

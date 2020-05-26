@@ -18,7 +18,7 @@ if($cherry_biz_our_slider_checkbox) :
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-8">
-                                    <div class="nnc-banner__info">
+                                    <div class="nnc-banner__info" data-aos="fade-up">
                                         <h5 class="nnc-banner__title"><?php echo esc_html(get_theme_mod('cherry_biz_slider_title_'.$counter)); ?></h5>
                                         <h2  class="nnc-banner__subtitle"><?php echo esc_html($page->post_title); ?></span></h2>
                                         <div class="nnc-banner__btn">

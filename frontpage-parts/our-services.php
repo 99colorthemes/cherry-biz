@@ -13,8 +13,8 @@ if($cherry_biz_our_services_checkbox) :
         <div class="row">
             <div class="col-12">
                 <div class="nnc-section">
-                    <h6 class="nnc-section__title"><?php echo esc_html($cherry_biz_our_services_title); ?></h6>
-                    <h2 class="nnc-section__subtitle"><?php echo esc_html($cherry_biz_our_services_sub_title); ?></h2>
+                    <h6 class="nnc-section__title" data-aos="fade-up"><?php echo esc_html($cherry_biz_our_services_title); ?></h6>
+                    <h2 class="nnc-section__subtitle" data-aos="fade-up"><?php echo esc_html($cherry_biz_our_services_sub_title); ?></h2>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@ if($cherry_biz_our_services_checkbox) :
                     $page = get_post($pageId);
             ?>
 
-                <div class="col-md-12 col-lg-4 d-flex nnc-service__item">
+                <div class="col-md-12 col-lg-4 d-flex nnc-service__item" data-aos="fade-up">
                     <div class="card nnc-card text-center">
                         <div class="card-body">
                             <div class="nnc-service__icon">
