@@ -8,7 +8,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Cherry Biz is modern style free responsive Business WordPress Theme. Cherry Biz can be used for consulting business, portfolio, startup company, finance business and almost any kind of sites. It is SEO friendly with featured image supports and custom colors. Theme customizer can be used to change color, upload logo and other theme settings. You can get quick SUPPORT through support page https://99colorthemes.com/support/ and view live DEMO at https://demo.99colorthemes.com/cherry-biz
+Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be used for consulting business, portfolio, startup company, finance business and almost any kind of sites. Theme customizer can be used to change color, upload logo and other theme settings. It is SEO friendly, responsive and cross-browser compatibility. You can get quick SUPPORT through support page and view live DEMO at http://demo.99colorthemes.com/cherry-biz/.
 
 == Installation ==
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
