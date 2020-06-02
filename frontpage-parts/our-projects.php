@@ -37,8 +37,8 @@ if($cherry_biz_projects_checkbox) :
                             while ($cherry_biz_projects->have_posts()):$cherry_biz_projects->the_post();
                         $tags = get_the_tags();
                     ?>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="nnc-product__item card nnc-card" data-aos="fade-up">
+                            <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
+                        <div class="nnc-product__item card nnc-card">
                             <?php if (has_post_thumbnail()) : ?>
                                 <div class="nnc-product__img">
                                     <?php the_post_thumbnail(); ?>

@@ -6,7 +6,7 @@ $cherry_biz_testimonials_checkbox = get_theme_mod('cherry_biz_testimonials_check
 
 if($cherry_biz_testimonials_checkbox) :
 ?>
-    <section class="nnc-testimonial nnc-s-padd">
+    <section class="nnc-testimonial nnc-s-padd" data-aos="fade-up">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -18,7 +18,7 @@ if($cherry_biz_testimonials_checkbox) :
         </div>
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-10 col-lg-8">
-        <div class="nnc-testimonial--block">
+        <div class="nnc-testimonial--block" data-aos="fade-up">
                 <div class="swiper-container nnc-testimonial-container">
                     <div class="swiper-wrapper">
                     <?php
@@ -35,7 +35,7 @@ if($cherry_biz_testimonials_checkbox) :
                                 $tags = get_the_tags();
                     ?>
                         <div class="swiper-slide">
-                            <div class="nnc-testimonial__item" data-aos="fade-up">
+                            <div class="nnc-testimonial__item">
                                 <i class="fas fa-quote-left nnc-icon--xl"></i>
                                 <div class="nnc-testimonial__content">
                                     <?php the_content(); ?>
