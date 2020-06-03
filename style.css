@@ -4,16 +4,18 @@ Theme URI: https://99colorthemes.com/themes/cherry-biz
 Author: 99colorthemes
 Author URI: https://99colorthemes.com
 Description: Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be used for consulting business, portfolio, startup company, finance business and almost any kind of corporate/creative sites. Theme customizer can be used to change color, upload logo and other theme settings. It is SEO friendly, responsive and cross-browser compatibility. Cherry Biz will make your WordPress look beautiful everywhere.
-Version:  1.0.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.2
+Tested up to: 5.4.1
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
 Text Domain: cherry-biz
 Tags: one-column, two-column, flexible-header, custom-colors, custom-background, custom-menu, custom-logo, editor-style, featured-images, theme-options, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-cherry-biz is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Cherry Biz is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -41,11 +43,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
 	 ========================================================================== */
 

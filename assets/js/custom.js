@@ -15,10 +15,12 @@ jQuery(document).ready(function($){
     // Search
     $("#nnc-search-icon").click(function(){
         $(".search-block").addClass("active");
+        $("body").addClass("o-h");
     });
 
     $("#nnc-search-close").click(function(){
         $(".search-block").removeClass("active");
+        $("body").removeClass("o-h");
     });
 
     //nnc-hero-slider

@@ -1,11 +1,11 @@
 === Cherry Biz Free Theme ===
 Contributors: 99colorthemes
 Tags: one-column, flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
-Tested up to: WordPress 5.4.1
+Tested up to: 5.4.1
 Requires PHP: 5.6
 Stable tag:  1.0.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v2 or later
+License URI: LICENSE
 
 == Description ==
 Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be used for consulting business, portfolio, startup company, finance business and almost any kind of sites. Theme customizer can be used to change color, upload logo and other theme settings. It is SEO friendly, responsive and cross-browser compatibility. You can get quick SUPPORT through support page and view live DEMO at http://demo.99colorthemes.com/cherry-biz/.
@@ -16,7 +16,9 @@ Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be u
 3. Click Activate to use your new theme right away.
 
 == Credits ==
-* Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+
+* Based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
 
 == CSS ==
 1. Bootstrap (https://getbootstrap.com/)

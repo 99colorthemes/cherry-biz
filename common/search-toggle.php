@@ -1,8 +1,4 @@
 <div class="search-block">
-    <button role="button" id="nnc-search-close" class="search-close bg-none p-0">
-        <i class="fas fa-times"></i>
-    </button>
-
     <div class="nnc-search-form container mb-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
@@ -10,11 +6,11 @@
                     <label class="m-0">
                         <span class="screen-reader-text"><?php esc_html_e('Search for', 'cherry-biz'); ?>:</span>
                         <input type="search"
-                               autofocus
                                class="search-field"
                                placeholder="<?php esc_attr_e('Search...', 'cherry-biz'); ?>"
                                value=""
-                               name="s">
+                               name="s"
+                               autofocus>
                     </label>
                     <button role="button" class="btn btn--primary btn--icon">
                         <i class="fas fa-search text-white"></i>
@@ -23,4 +19,7 @@
             </div>
         </div>
     </div>
+    <button role="button" id="nnc-search-close" class="search-close bg-none p-0">
+        <i class="fas fa-times"></i>
+    </button>
 </div>
