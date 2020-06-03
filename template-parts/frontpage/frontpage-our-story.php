@@ -40,4 +40,6 @@ if($cherry_biz_our_story_page_id && $cherry_biz_our_story_checkbox) :
     </div>
 </section>
 
-<?php endif; ?>
+<?php
+    wp_reset_postdata();
+endif; ?>

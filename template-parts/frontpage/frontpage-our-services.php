@@ -46,7 +46,9 @@ if($cherry_biz_our_services_checkbox) :
                     </div>
                 </div>
             <?php
+                    wp_reset_postdata();
             endif;
+
             } ?>
 
         </div>

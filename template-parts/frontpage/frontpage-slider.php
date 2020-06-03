@@ -33,6 +33,7 @@ if($cherry_biz_our_slider_checkbox) :
                     </div>
                 </div>
             <?php
+                        wp_reset_postdata();
                     endif;
                 } ?>
         </div>
