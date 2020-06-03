@@ -34,25 +34,29 @@ $cherry_biz_youtube_link = get_theme_mod('cherry_biz_youtube_link', '');
                         <ul class="list-inline m-0">
                             <?php if ($cherry_biz_facebook_link) : ?>
                                 <li class="list-inline-item">
-                                    <a href="<?php echo esc_url($cherry_biz_facebook_link); ?>" title="facebook"><i class="fab fa-facebook"></i></a>
+                                    <a href="<?php echo esc_url($cherry_biz_facebook_link); ?>"
+                                       title="<?php echo esc_attr__('facebook', 'cherry-biz'); ?>"><i class="fab fa-facebook"></i></a>
                                 </li>
                             <?php endif; ?>
 
                             <?php if ($cherry_biz_instagram_link) : ?>
                                 <li class="list-inline-item">
-                                    <a href="<?php echo esc_url($cherry_biz_instagram_link); ?>" title="instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="<?php echo esc_url($cherry_biz_instagram_link); ?>"
+                                       title="<?php echo esc_attr__('instagram', 'cherry-biz'); ?>"><i class="fab fa-instagram"></i></a>
                                 </li>
                             <?php endif; ?>
 
                             <?php if ($cherry_biz_twitter_link) : ?>
                                 <li class="list-inline-item">
-                                    <a href="<?php echo esc_url($cherry_biz_twitter_link); ?>" title="twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="<?php echo esc_url($cherry_biz_twitter_link); ?>"
+                                       title="<?php echo esc_attr__('twitter', 'cherry-biz'); ?>"><i class="fab fa-twitter"></i></a>
                                 </li>
                             <?php endif; ?>
 
                             <?php if ($cherry_biz_youtube_link) : ?>
                                 <li class="list-inline-item">
-                                    <a href="<?php echo esc_url($cherry_biz_youtube_link); ?>" title="youtube"><i class="fab fa-youtube"></i></a>
+                                    <a href="<?php echo esc_url($cherry_biz_youtube_link); ?>"
+                                       title="<?php echo esc_attr__('youtube', 'cherry-biz'); ?>"><i class="fab fa-youtube"></i></a>
                                 </li>
                             <?php endif; ?>
                         </ul>

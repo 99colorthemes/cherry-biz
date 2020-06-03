@@ -56,13 +56,11 @@ get_header();
                     </main><!-- #main -->
                     <div class="nnc-pagination">
                         <?php
-                        $big = 999999999; // need an unlikely integer
-                        echo paginate_links([
-                            'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-                            'format' => '?paged=%#%',
-                            'current' => max(1, get_query_var('paged')),
-                            'total' => $wp_query->max_num_pages
-                        ]);
+                            the_posts_pagination( array(
+                                'mid_size'  => 2,
+                                'prev_text' => esc_html__( 'Previous', 'cherry-biz' ),
+                                'next_text' => esc_html__( 'Next', 'cherry-biz' ),
+                            ) );
                         ?>
                     </div>
                 </div><!-- #primary -->
