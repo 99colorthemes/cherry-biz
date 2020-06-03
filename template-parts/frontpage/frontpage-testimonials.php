@@ -32,7 +32,7 @@ if($cherry_biz_testimonials_checkbox) :
 
                             if($cherry_biz_testimonials->have_posts()) :
                                 while ($cherry_biz_testimonials->have_posts()):$cherry_biz_testimonials->the_post();
-                                $tags = get_the_tags();
+                                $post_tags = get_the_tags();
                     ?>
                         <div class="swiper-slide">
                             <div class="nnc-testimonial__item" data-aos="fade-up">
@@ -45,16 +45,16 @@ if($cherry_biz_testimonials_checkbox) :
                                     <span class="nnc-testimonial__client-designation">
                                         <?php
                                             $output = '';
-                                            if($tags) {
-                                                foreach ($tags as $key => $tag) {
-                                                    $output .= $tag->name;
-                                                    if(count($tags) != ($key + 1)) {
+                                            if($post_tags) {
+                                                foreach ($post_tags as $key => $post_tag) {
+                                                    $output .= $post_tag->name;
+                                                    if(count($post_tags) != ($key + 1)) {
                                                         $output .= ' / ';
                                                     }
                                                 }
                                             }
 
-                                            echo $output;
+                                            echo esc_html($output);
                                             ?>
                                         </span>
                                     </div>

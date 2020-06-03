@@ -58,8 +58,8 @@ get_header();
                         <?php
                             the_posts_pagination( array(
                                 'mid_size'  => 2,
-                                'prev_text' => __( 'Previous', 'oreo' ),
-                                'next_text' => __( 'Next', 'oreo' ),
+                                'prev_text' => esc_html__( 'Previous', 'cherry-biz' ),
+                                'next_text' => esc_html__( 'Next', 'cherry-biz' ),
                             ) );
                         ?>
                     </div>

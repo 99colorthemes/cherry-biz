@@ -4,8 +4,8 @@ Tags: one-column, flexible-header, custom-colors, custom-menu, custom-logo, edit
 Tested up to: 5.4.1
 Requires PHP: 5.6
 Stable tag:  1.0.2
-License: GNU General Public License v2 or later
-License URI: LICENSE
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 
 == Description ==
 Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be used for consulting business, portfolio, startup company, finance business and almost any kind of sites. Theme customizer can be used to change color, upload logo and other theme settings. It is SEO friendly, responsive and cross-browser compatibility. You can get quick SUPPORT through support page and view live DEMO at http://demo.99colorthemes.com/cherry-biz/.
