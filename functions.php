@@ -24,7 +24,7 @@ if (!function_exists('cherry_biz_setup')) :
          * If you're building a theme based on cherry-biz, use a find and replace
          * to change 'cherry-biz' to the name of your theme in all the template files.
          */
-        load_theme_textdomain('cherry-biz', get_template_directory() . '/languages');
+        load_theme_textdomain('cherry-biz');
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
@@ -179,7 +179,7 @@ function cherry_biz_scripts()
 {
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css');
 
-    wp_enqueue_style('Font Awesome', get_template_directory_uri() . '/assets/css/all.css');
+    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/all.css');
 
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper.css');
 

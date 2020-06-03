@@ -11,18 +11,12 @@
 
 get_header();
 
-require get_template_directory() . '/frontpage-parts/slider.php';
-
-require get_template_directory() . '/frontpage-parts/client.php';
-
-require get_template_directory() . '/frontpage-parts/our-services.php';
-
-require get_template_directory() . '/frontpage-parts/our-story.php';
-
-require get_template_directory() . '/frontpage-parts/our-projects.php';
-
-require get_template_directory() . '/frontpage-parts/testimonials.php';
-
-require get_template_directory() . '/frontpage-parts/our-blogs.php';
+get_template_part( 'template-parts/frontpage/frontpage', 'slider' );
+get_template_part( 'template-parts/frontpage/frontpage', 'client' );
+get_template_part( 'template-parts/frontpage/frontpage', 'our-services' );
+get_template_part( 'template-parts/frontpage/frontpage', 'our-story' );
+get_template_part( 'template-parts/frontpage/frontpage', 'our-projects' );
+get_template_part( 'template-parts/frontpage/frontpage', 'testimonials' );
+get_template_part( 'template-parts/frontpage/frontpage', 'our-blogs' );
 
 get_footer();

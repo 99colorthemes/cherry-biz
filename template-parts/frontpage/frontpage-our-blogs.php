@@ -48,7 +48,7 @@ if($cherry_biz_blogs_checkbox) :
                             <div class="nnc-blog__date">
                                 <span class="text-muted"><?php the_author(); ?></span>
                                 <i class="fas fa-circle"></i>
-                                <span class="text-muted"><?php comments_number('No Comment', '1 Comment', '% Comments'); ?></span>
+                                <span class="text-muted"><?php comments_number(esc_html__('No Comment', 'cherry-biz'), esc_html__('1 Comment', 'cherry-biz') , '% '.esc_html__('Comments', 'cherry-biz')); ?></span>
                             </div>
                         </div>
                     </div>

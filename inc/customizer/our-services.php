@@ -80,7 +80,7 @@ for ($counter = 0; $counter < cherry_biz_config('services_limit'); $counter++) {
         'label'                  => esc_html__('Icon', 'cherry-biz') ,
         'section'                => 'cherry_biz_our_services_section',
         'settings'               => 'cherry_biz_our_services_icon_'.$counter,
-        'description' => "Choose icon name from <a target='_blank' href='https://fontawesome.com/cheatsheet/free/solid'>font-awesome</a>"
+        'description'           => esc_html__('Choose icon name from', 'cherry-biz')." <a target='_blank' href='https://fontawesome.com/cheatsheet/free/solid'>".esc_html__('font-awesome', 'cherry-biz')."</a>"
     ));
 
     $wp_customize->add_setting('cherry_biz_our_services_page_'.$counter, array(

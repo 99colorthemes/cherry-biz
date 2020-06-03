@@ -35,10 +35,10 @@ if($cherry_biz_projects_checkbox) :
 
                         if($cherry_biz_projects->have_posts()) :
                             while ($cherry_biz_projects->have_posts()):$cherry_biz_projects->the_post();
-                        $tags = get_the_tags();
+                        $post_tags = get_the_tags();
                     ?>
-                            <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up">
-                        <div class="nnc-product__item card nnc-card">
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="nnc-product__item card nnc-card" data-aos="fade-up">
                             <?php if (has_post_thumbnail()) : ?>
                                 <div class="nnc-product__img">
                                     <?php the_post_thumbnail(); ?>
@@ -48,18 +48,18 @@ if($cherry_biz_projects_checkbox) :
                                 <h5 class="mb-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                                 <span>
                                     <?php
-                                        $output = '';
-                                        if($tags) {
-                                            foreach ($tags as $key => $tag) {
-                                                $output .= $tag->name;
+                                        $tag_output = '';
+                                        if($post_tags) {
+                                            foreach ($post_tags as $key => $post_tag) {
+                                                $tag_output .= $post_tag->name;
 
-                                                if(count($tags) == ($key + 1)) {
-                                                    $output .= ' / ';
+                                                if(count($post_tags) == ($key + 1)) {
+                                                    $tag_output .= ' / ';
                                                 }
                                             }
                                         }
 
-                                        echo $output;
+                                        echo esc_html($tag_output);
                                     ?>
                                 </span>
                             </div>
