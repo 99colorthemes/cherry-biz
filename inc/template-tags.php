@@ -31,11 +31,11 @@ if (!function_exists('cherry_biz_posted_on')) :
 
         $posted_on = sprintf(
             /* translators: %s: post date. */
-            esc_html__('%s', 'cherry-biz'),
+            esc_html('%s', 'cherry-biz'),
             '<a href="' . esc_url(get_day_link($archive_year, $archive_month, $archive_day)) . '" rel="bookmark">' . $time_string . '</a>'
         );
 
-        echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+        echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     }
 endif;
 
@@ -51,7 +51,7 @@ if (!function_exists('cherry_biz_posted_by')) :
             '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
         );
 
-        echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+        echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     }
 endif;
 
@@ -67,7 +67,7 @@ if (!function_exists('cherry_biz_entry_footer')) :
             $categories_list = get_the_category_list(esc_html__(' / ', 'cherry-biz'));
             if ($categories_list) {
                 /* translators: 1: list of categories. */
-                printf('<span class="cat-links">' . esc_html__('%1$s', 'cherry-biz') . '</span>', $categories_list); // WPCS: XSS OK.
+                printf('<span class="cat-links">' . esc_html('%1$s', 'cherry-biz') . '</span>', $categories_list);  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             }
         }
 

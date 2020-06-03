@@ -331,38 +331,38 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				/* translators: %s: plugin name. */
 				'updating'                        => __( 'Updating Plugin: %s', 'cherry-biz' ),
 				'oops'                            => __( 'Something went wrong with the plugin API.', 'cherry-biz' ),
-				'notice_can_install_required'     => _n_noop(
-					/* translators: 1: plugin name(s). */
+                /* translators: %1$s is replaced with "string" */
+                'notice_can_install_required'     => _n_noop(
 					'This theme requires the following plugin: %1$s.',
 					'This theme requires the following plugins: %1$s.',
 					'cherry-biz'
 				),
+                /* translators: %1$s is replaced with "string" */
 				'notice_can_install_recommended'  => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'This theme recommends the following plugin: %1$s.',
 					'This theme recommends the following plugins: %1$s.',
 					'cherry-biz'
 				),
+                /* translators: %1$s is replaced with "string" */
 				'notice_ask_to_update'            => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 					'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
 					'cherry-biz'
 				),
+                /* translators: %1$s is replaced with "string" */
 				'notice_ask_to_update_maybe'      => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'There is an update available for: %1$s.',
 					'There are updates available for the following plugins: %1$s.',
 					'cherry-biz'
 				),
+                /* translators: %1$s is replaced with "string" */
 				'notice_can_activate_required'    => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'The following required plugin is currently inactive: %1$s.',
 					'The following required plugins are currently inactive: %1$s.',
 					'cherry-biz'
 				),
+                /* translators: %1$s is replaced with "string" */
 				'notice_can_activate_recommended' => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'The following recommended plugin is currently inactive: %1$s.',
 					'The following recommended plugins are currently inactive: %1$s.',
 					'cherry-biz'
@@ -556,7 +556,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			if ( isset( $_REQUEST['tab'] ) && 'plugin-information' === $_REQUEST['tab'] ) {
 				// Needed for install_plugin_information().
-				require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+				require_once ABSPATH . 'wp-admin/includes/plugin-install.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 				wp_enqueue_style( 'plugin-install' );
 
@@ -709,7 +709,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			}
 
 			// All plugin information will be stored in an array for processing.
-			$slug = $this->sanitize_key( urldecode( $_GET['plugin'] ) );
+			$slug = $this->sanitize_key( urldecode( wp_unslash($_GET['plugin']) ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 			if ( ! isset( $this->plugins[ $slug ] ) ) {
 				return false;
@@ -767,7 +767,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				);
 
 				if ( ! class_exists( 'Plugin_Upgrader', false ) ) {
-					require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+					require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 				}
 
 				$title     = ( 'update' === $install_type ) ? $this->strings['updating'] : $this->strings['installing'];
@@ -1552,7 +1552,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			if ( ! isset( $api[ $slug ] ) ) {
 				if ( ! function_exists( 'plugins_api' ) ) {
-					require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+					require_once ABSPATH . 'wp-admin/includes/plugin-install.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 				}
 
 				$response = plugins_api( 'plugin_information', array( 'slug' => $slug, 'fields' => array( 'sections' => false ) ) );
@@ -1892,7 +1892,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 */
 		public function get_plugins( $plugin_folder = '' ) {
 			if ( ! function_exists( 'get_plugins' ) ) {
-				require_once ABSPATH . 'wp-admin/includes/plugin.php';
+				require_once ABSPATH . 'wp-admin/includes/plugin.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			}
 
 			return get_plugins( $plugin_folder );
@@ -2065,7 +2065,7 @@ if ( ! function_exists( 'tgmpa' ) ) {
  * @since 2.2.0
  */
 if ( ! class_exists( 'WP_List_Table' ) ) {
-	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
+	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 }
 
 if ( ! class_exists( 'TGMPA_List_Table' ) ) {
@@ -2765,10 +2765,10 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 
 				if ( is_array( $_POST['plugin'] ) ) {
-					$plugins_to_install = (array) $_POST['plugin'];
+					$plugins_to_install = (array) wp_unslash($_POST['plugin']); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				} elseif ( is_string( $_POST['plugin'] ) ) {
 					// Received via Filesystem page - un-flatten array (WP bug #19643).
-					$plugins_to_install = explode( ',', $_POST['plugin'] );
+					$plugins_to_install = explode( ',', wp_unslash($_POST['plugin']) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				}
 
 				// Sanitize the received input.
@@ -2913,7 +2913,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// Grab plugin data from $_POST.
 				$plugins = array();
 				if ( isset( $_POST['plugin'] ) ) {
-					$plugins = array_map( 'urldecode', (array) $_POST['plugin'] );
+					$plugins = array_map( 'urldecode', (array) wp_unslash($_POST['plugin']) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 					$plugins = array_map( array( $this->tgmpa, 'sanitize_key' ), $plugins );
 				}
 
@@ -2947,10 +2947,10 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					$last_plugin  = array_pop( $plugin_names ); // Pop off last name to prep for readability.
 					$imploded     = empty( $plugin_names ) ? $last_plugin : ( implode( ', ', $plugin_names ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'cherry-biz' ) . ' ' . $last_plugin );
 
-					printf( // WPCS: xss ok.
+					printf( // phpcs:ignore WordPress.Security.EscapeOutput.DeprecatedWhitelistCommentFound
 						'<div id="message" class="updated"><p>%1$s %2$s.</p></div>',
 						esc_html( _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'cherry-biz' ) ),
-						$imploded
+						$imploded // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					);
 
 					// Update recently activated plugins option.
@@ -3067,7 +3067,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 
 		if ( isset( $_GET['page'] ) && $tgmpa_instance->menu === $_GET['page'] ) {
 			if ( ! class_exists( 'Plugin_Upgrader', false ) ) {
-				require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+				require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			}
 
 			if ( ! class_exists( 'TGMPA_Bulk_Installer' ) ) {

@@ -63,7 +63,7 @@ class Cherry_Biz_Category_Dropdown_Custom_Control extends WP_Customize_Control {
 
                     <?php
                     foreach ( $this->cats as $cat ) {
-                        printf('<option value="%s" %s>%s</option>', $cat->term_id, selected($this->value(), $cat->term_id, false), $cat->name);
+                        printf('<option value="%s" %s>%s</option>', esc_html($cat->term_id), selected($this->value(), esc_html($cat->term_id), false), esc_html($cat->name));
                     }
                     ?>
 

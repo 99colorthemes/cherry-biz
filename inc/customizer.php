@@ -16,7 +16,7 @@ function cherry_biz_customize_register($wp_customize)
     $wp_customize->get_setting('blogdescription')->transport = 'postMessage';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
 
-    require_once get_template_directory() .'/inc/customizer-custom-control.php';
+    require_once get_template_directory() .'/inc/customizer-custom-control.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
     if (isset($wp_customize->selective_refresh)) {
         $wp_customize->selective_refresh->add_partial('blogname', [
@@ -49,15 +49,16 @@ function cherry_biz_customize_register($wp_customize)
 
     $wp_customize->get_section('title_tagline')->panel = 'cherry_biz_general_options';
 
-    require_once get_template_directory() .'/inc/customizer/top-bar.php';
-    require_once get_template_directory() .'/inc/customizer/social-links.php';
-    require_once get_template_directory() .'/inc/customizer/slider.php';
-    require_once get_template_directory() .'/inc/customizer/clients.php';
-    require_once get_template_directory() .'/inc/customizer/our-services.php';
-    require_once get_template_directory() .'/inc/customizer/our-story.php';
-    require_once get_template_directory() .'/inc/customizer/projects.php';
-    require_once get_template_directory() .'/inc/customizer/testimonials.php';
-    require_once get_template_directory() .'/inc/customizer/blogs.php';
+
+    require_once get_template_directory() .'/inc/customizer/top-bar.php';  // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+    require_once get_template_directory() .'/inc/customizer/social-links.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+    require_once get_template_directory() .'/inc/customizer/slider.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+    require_once get_template_directory() .'/inc/customizer/clients.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+    require_once get_template_directory() .'/inc/customizer/our-services.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+    require_once get_template_directory() .'/inc/customizer/our-story.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+    require_once get_template_directory() .'/inc/customizer/projects.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+    require_once get_template_directory() .'/inc/customizer/testimonials.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+    require_once get_template_directory() .'/inc/customizer/blogs.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
     $wp_customize->add_section('cherry_biz_contact_page_section', [
         'title' => esc_html__('Contact Page Options', 'cherry-biz'),
