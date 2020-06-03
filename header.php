@@ -32,9 +32,8 @@ if ( function_exists( 'wp_body_open' ) ) {
         <?php the_custom_header_markup(); ?>
 
         <?php
-            get_template_part( 'template-parts/search/search', 'popup' );
-
             get_template_part( 'template-parts/top-bar');
+            get_template_part( 'template-parts/search/search', 'popup' );
         ?>
 
         <header id="masthead" class="site-header nnc-header">

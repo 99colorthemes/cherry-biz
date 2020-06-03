@@ -189,6 +189,8 @@ function cherry_biz_scripts()
 
     wp_enqueue_style('cherry-biz-style', get_stylesheet_uri());
 
+    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js', [], '', true);
+
     wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/swiper.js', [], '', true);
 
     wp_enqueue_script('aos', get_template_directory_uri() . '/assets/js/aos.js', [], '', true);

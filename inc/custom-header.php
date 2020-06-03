@@ -54,8 +54,7 @@ if ( ! function_exists( 'cherry_biz_header_style' ) ) :
 			?>
 			.site-title,
 			.site-description {
-				position: absolute;
-				clip: rect(1px, 1px, 1px, 1px);
+				display: none;
 			}
 		<?php
 		// If the user has set a custom color for the text use that.

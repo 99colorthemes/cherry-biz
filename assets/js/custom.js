@@ -7,6 +7,9 @@ jQuery(document).ready(function($){
     $("#nnc-close-icon").click(function(){
         $(".nnc-sidenav").removeClass("active");
     });
+    $("#nnc-close-icon").focusout(function(){
+        $('#side-menu #primary-menu li a')[0].focus();
+    });
 
     $( ".sm-cc-menu" ).click(function() {
         $(this).next().toggle( "500" );
@@ -16,6 +19,11 @@ jQuery(document).ready(function($){
     $("#nnc-search-icon").click(function(){
         $(".search-block").addClass("active");
         $("body").addClass("o-h");
+        $('.nnc-search-form').find('input[name=s]').focus();
+    });
+
+    $("#nnc-search-close").focusout(function(){
+        $('.nnc-search-form').find('input[name=s]').focus();
     });
 
     $("#nnc-search-close").click(function(){
