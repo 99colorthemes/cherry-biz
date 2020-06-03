@@ -5,7 +5,7 @@ $cherry_biz_our_story_title = get_theme_mod('cherry_biz_our_story_title');
 $cherry_biz_our_story_checkbox = get_theme_mod('cherry_biz_our_story_checkbox');
 
 if($cherry_biz_our_story_page_id && $cherry_biz_our_story_checkbox) :
-    $page = get_post($cherry_biz_our_story_page_id);
+    $our_story_page = get_post($cherry_biz_our_story_page_id);
 ?>
 
 <section class="nnc-about nnc-s-padd">
@@ -24,13 +24,13 @@ if($cherry_biz_our_story_page_id && $cherry_biz_our_story_checkbox) :
                 <div class="nnc-about__content" data-aos="fade-up">
                     <div class="nnc-section text-left pb-3">
                         <h6 class="nnc-section__title"><?php echo esc_html($cherry_biz_our_story_title); ?></h6>
-                        <h2 class="nnc-section__subtitle"><?php echo esc_html($page->post_title); ?></h2>
+                        <h2 class="nnc-section__subtitle"><?php echo esc_html($our_story_page->post_title); ?></h2>
                     </div>
                     <div class="nnc-about__desc">
-                        <p><?php echo esc_html($page->post_excerpt); ?></p>
+                        <p><?php echo esc_html($our_story_page->post_excerpt); ?></p>
                     </div>
                     <div class="mt-4">
-                        <a href="<?php echo esc_url($page->guid); ?>" class="btn btn--primary">
+                        <a href="<?php echo esc_url($our_story_page->guid); ?>" class="btn btn--primary">
                             <?php echo esc_html__('Read More', 'cherry-biz') ?>
                         </a>
                     </div>

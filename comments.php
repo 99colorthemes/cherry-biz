@@ -33,14 +33,14 @@ if ( post_password_required() ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'cherry-biz' ),
-					'<span>' . get_the_title() . '</span>'
+					'<span>' . wp_kses_post( get_the_title() )  . '</span>'
 				);
 			} else {
-				printf( // WPCS: XSS OK.
+				printf(
 					/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $cherry_biz_comment_count, 'comments title', 'cherry-biz' ) ),
-					number_format_i18n( $cherry_biz_comment_count ),
-					'<span>' . get_the_title() . '</span>'
+					number_format_i18n( $cherry_biz_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					'<span>' . wp_kses_post( get_the_title() )  . '</span>'
 				);
 			}
 			?>

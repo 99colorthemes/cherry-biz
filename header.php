@@ -32,9 +32,9 @@ if ( function_exists( 'wp_body_open' ) ) {
         <?php the_custom_header_markup(); ?>
 
         <?php
-            require get_template_directory() . '/common/search-toggle.php';
+            get_template_part( 'template-parts/search/search', 'popup' );
 
-            require get_template_directory() . '/common/top-bar.php';
+            get_template_part( 'template-parts/top-bar');
         ?>
 
         <header id="masthead" class="site-header nnc-header">
@@ -63,7 +63,7 @@ if ( function_exists( 'wp_body_open' ) ) {
                                 $cherry_biz_description = get_bloginfo('description', 'display');
                                 if ($cherry_biz_description || is_customize_preview()) :
                                     ?>
-                                <p class="site-description m-0"><?php echo $cherry_biz_description; /* WPCS: xss ok. */ ?>
+                                <p class="site-description m-0"><?php echo $cherry_biz_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                 </p>
                                 <?php endif; ?>
                             </div><!-- .site-branding -->
@@ -86,7 +86,7 @@ if ( function_exists( 'wp_body_open' ) ) {
                                 <svg class="nnc-icon nnc-icon--lg" id="nnc-icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459"><path d="M0 382.5h459v-51H0v51zM0 255h459v-51H0v51zM0 76.5v51h459v-51H0z"/></svg>
                             </button>
 
-                            <?php require get_template_directory() . '/common/side-menu.php'; ?>
+                            <?php get_template_part( 'template-parts/side-menu'); ?>
                         </div>
                     </div>
                 </div>

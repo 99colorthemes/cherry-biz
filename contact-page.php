@@ -21,7 +21,7 @@ get_header();
                         <main id="main" class="site-main">
                             <?php if(!empty($cherry_biz_contact_map)): ?>
                                 <div class="nnc-map">
-                                    <?php echo $cherry_biz_contact_map; ?>
+                                    <?php echo $cherry_biz_contact_map; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped?>
                                 </div>
                             <?php endif; ?>
                             <div class="nnc-contact">
@@ -31,7 +31,7 @@ get_header();
                                 <?php endwhile; ?>
                                 <?php
                                     if(!empty($cherry_biz_contact_shortcode)):
-                                        echo do_shortcode($cherry_biz_contact_shortcode );
+                                        echo do_shortcode(esc_html($cherry_biz_contact_shortcode));
                                     endif;
                                 ?>
                             </div>

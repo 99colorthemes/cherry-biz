@@ -23,10 +23,10 @@ if($cherry_biz_our_services_checkbox) :
             <?php
 
             for ($counter = 0; $counter < cherry_biz_config('services_limit'); $counter++) {
-                $pageId = get_theme_mod('cherry_biz_our_services_page_'.$counter);
+                $service_page_id = get_theme_mod('cherry_biz_our_services_page_'.$counter);
 
-                if($pageId) :
-                    $page = get_post($pageId);
+                if($service_page_id) :
+                    $service_page = get_post($service_page_id);
             ?>
 
                 <div class="col-md-12 col-lg-4 d-flex nnc-service__item" data-aos="fade-up">
@@ -36,11 +36,11 @@ if($cherry_biz_our_services_checkbox) :
                                 <i class="fas fa-<?php echo esc_attr(get_theme_mod('cherry_biz_our_services_icon_'.$counter)); ?>"></i>
                             </div>
                             <h4 class="nnc-service__title">
-                                <a href="<?php echo esc_url($page->guid); ?>" class="">
-                                    <?php echo esc_html($page->post_title); ?>
+                                <a href="<?php echo esc_url($service_page->guid); ?>" class="">
+                                    <?php echo esc_html($service_page->post_title); ?>
                                 </a>
                             </h4>
-                            <div class="nnc-service__content"><p><?php echo esc_html($page->post_excerpt); ?></p>
+                            <div class="nnc-service__content"><p><?php echo esc_html($service_page->post_excerpt); ?></p>
                             </div>
                         </div>
                     </div>

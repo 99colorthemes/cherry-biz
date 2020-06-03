@@ -62,9 +62,9 @@
                     $output = '<span>';
                     $output .= '&copy;';
                     $output .= esc_html__(' Copyright ', 'cherry-biz');
-                    $output .= date('Y'). ' ';
+                    $output .= date_i18n( __( 'Y' , 'cherry-biz' ) ) . ' ';
                     $output .= '<a href="'.esc_url( home_url( '/' )).'">';
-                    $output .= esc_attr(get_bloginfo('name', 'display'));
+                    $output .= esc_html(get_bloginfo('name', 'display'));
                     $output .= '</a>.';
                     $output .= esc_html__(' All rights reserved ', 'cherry-biz');
                     $output .= '</span>';
@@ -79,7 +79,7 @@
                     $output .= '</a>';
                     $output .= '</span>';
 
-                    echo $output;
+                    echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                     ?>
                 </div><!-- .site-info -->
             </div>
