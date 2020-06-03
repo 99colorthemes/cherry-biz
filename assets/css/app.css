@@ -1020,7 +1020,8 @@ article .entry-summary p {
 .page-header .page-title {
   font-size: 2.4rem; }
 
-.admin-bar .search-block {
+.admin-bar .search-block,
+.admin-bar .nnc-sidenav__bar {
   margin-top: 32px; }
 
 a {
