@@ -7,8 +7,10 @@ jQuery(document).ready(function($){
     $("#nnc-close-icon").click(function(){
         $(".nnc-sidenav").removeClass("active");
     });
-    $("#nnc-close-icon").focusout(function(){
-        $('#side-menu #primary-menu li a')[0].focus();
+    $("#nnc-close-icon").keydown(function(event){
+        if(event.key == 'Tab') {
+            $('#side-menu #primary-menu li a')[0].focus();
+        }
     });
 
     $( ".sm-cc-menu" ).click(function() {
@@ -22,9 +24,61 @@ jQuery(document).ready(function($){
         $('.nnc-search-form').find('input[name=s]').focus();
     });
 
-    $("#nnc-search-close").focusout(function(){
-        $('.nnc-search-form').find('input[name=s]').focus();
-    });
+
+
+
+
+    keyDownBack('.nnc-search-form', 'input[name=s]', '#nnc-search-close');
+
+    keyDownFinal('.nnc-search-form', "#nnc-search-close", 'input[name=s]');
+    keyDownBack('.nnc-search-form', "#nnc-search-close", '#popup-search-button');
+
+    function keyDownFinal(wrapper, element, focus_element) {
+
+        var final_shift = false;
+        $(element).keydown(function(event){
+            if(event.key == 'Shift') {
+                final_shift = true;
+            }
+            if(event.key == 'Tab') {
+                if(!final_shift) {
+                    console.log($(wrapper).find(focus_element));
+                    $(wrapper).find(focus_element).focus();
+                    final_shift = false;
+                    event.preventDefault();
+                } else {
+                    final_shift = false;
+                }
+            }
+            return;
+        });
+
+    }
+
+
+    function keyDownBack(wrapper, element, focus_element) {
+        var back_shift = false;
+        $(wrapper).on('keydown', element, function(event){
+            console.log(event.key);
+            if(event.key == 'Shift') {
+                back_shift = true;
+            }
+            if(back_shift && event.key == 'Tab') {
+                $(focus_element).focus();
+                back_shift = false;
+                event.preventDefault();
+            }
+            return;
+        });
+    }
+
+
+
+
+
+
+    //function update
+
 
     $("#nnc-search-close").click(function(){
         $(".search-block").removeClass("active");
