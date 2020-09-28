@@ -65,8 +65,8 @@ $cherry_biz_youtube_link = get_theme_mod('cherry_biz_youtube_link', '');
 
                         if($cherry_biz_search_checkbox) :
                     ?>
-                        <button id="nnc-search-icon" role="button" class="nnc-search--icon p-0 bg-none">
-                            <i class="fas fa-search text-white"></i>
+                        <button role="button" title="Search" class="btn btn--icon p-0 bg-none l-h-0 ml-3" data-custom-open="search-modal">
+                            <i class="fas fa-search"></i>
                         </button>
                         <?php endif; ?>
                     </div>

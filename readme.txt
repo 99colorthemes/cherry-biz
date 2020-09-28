@@ -28,11 +28,13 @@ Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be u
 
 == JS ==
 1. Swiper (https://swiperjs.com/)
-    Licensed under MIT
-    2020 © Swiper by Vladimir Kharlampidi
+   Licensed under MIT
+   2020 © Swiper by Vladimir Kharlampidi
 2. AOS (https://michalsnik.github.io/aos/)
-    Licensed under MIT (https://github.com/michalsnik/aos/blob/next/LICENSE)
-    Copyright 2015 AOS by Michał Sajnóg
+   Licensed under MIT (https://github.com/michalsnik/aos/blob/next/LICENSE)
+   Copyright 2015 AOS by Michał Sajnóg
+3. Micromodal (https://github.com/ghosh/Micromodal)
+   Licensed under MIT
 
 == Google Fonts ==
 1. Playfair Display (https://fonts.google.com/specimen/Playfair+Display)

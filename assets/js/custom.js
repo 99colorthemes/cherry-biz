@@ -1,90 +1,5 @@
 jQuery(document).ready(function($){
 
-    $("#nnc-menu-icon").click(function(){
-        $(".nnc-sidenav").addClass("active");
-    });
-
-    $("#nnc-close-icon").click(function(){
-        $(".nnc-sidenav").removeClass("active");
-    });
-    $("#nnc-close-icon").keydown(function(event){
-        if(event.key == 'Tab') {
-            $('#side-menu #primary-menu li a')[0].focus();
-        }
-    });
-
-    $( ".sm-cc-menu" ).click(function() {
-        $(this).next().toggle( "500" );
-    });
-
-    // Search
-    $("#nnc-search-icon").click(function(){
-        $(".search-block").addClass("active");
-        $("body").addClass("o-h");
-        $('.nnc-search-form').find('input[name=s]').focus();
-    });
-
-
-
-
-
-    keyDownBack('.nnc-search-form', 'input[name=s]', '#nnc-search-close');
-
-    keyDownFinal('.nnc-search-form', "#nnc-search-close", 'input[name=s]');
-    keyDownBack('.nnc-search-form', "#nnc-search-close", '#popup-search-button');
-
-    function keyDownFinal(wrapper, element, focus_element) {
-
-        var final_shift = false;
-        $(element).keydown(function(event){
-            if(event.key == 'Shift') {
-                final_shift = true;
-            }
-            if(event.key == 'Tab') {
-                if(!final_shift) {
-                    console.log($(wrapper).find(focus_element));
-                    $(wrapper).find(focus_element).focus();
-                    final_shift = false;
-                    event.preventDefault();
-                } else {
-                    final_shift = false;
-                }
-            }
-            return;
-        });
-
-    }
-
-
-    function keyDownBack(wrapper, element, focus_element) {
-        var back_shift = false;
-        $(wrapper).on('keydown', element, function(event){
-            console.log(event.key);
-            if(event.key == 'Shift') {
-                back_shift = true;
-            }
-            if(back_shift && event.key == 'Tab') {
-                $(focus_element).focus();
-                back_shift = false;
-                event.preventDefault();
-            }
-            return;
-        });
-    }
-
-
-
-
-
-
-    //function update
-
-
-    $("#nnc-search-close").click(function(){
-        $(".search-block").removeClass("active");
-        $("body").removeClass("o-h");
-    });
-
     //nnc-hero-slider
     var hero_slider = new Swiper('.nnc-hero-slider-container', {
         slidesPerView: 1,
@@ -134,5 +49,17 @@ jQuery(document).ready(function($){
         easing: 'ease-out-back',
         duration: 1500,
         delay: 200,
+    });
+
+    // Micromodal
+    MicroModal.init({
+        openTrigger: 'data-custom-open', // [3]
+        closeTrigger: 'data-custom-close', // [4]
+        openClass: 'is-open', // [5]
+        disableScroll: true, // [6]
+        disableFocus: false, // [7]
+        awaitOpenAnimation: true, // [8]
+        awaitCloseAnimation: true, // [9]
+        debugMode: true // [10]
     });
 });
