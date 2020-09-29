@@ -353,6 +353,11 @@ h1, h2, h3, h4, h5, h6 {
 	top: calc(100% + 1rem);
 }
 
+.main-navigation ul ul {
+	left: 9999rem;
+	right: inherit;
+}
+
 .main-navigation ul ul::before {
 	right: 0;
 	left: 0;
@@ -382,4 +387,8 @@ h1, h2, h3, h4, h5, h6 {
 .nnc-scroll-top {
  	right: 0;
 	left: 0;
+}
+
+.nnc-footer-bottom_block {
+	justify-content: flex-start!important;
 }

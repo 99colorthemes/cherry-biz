@@ -53,9 +53,9 @@
 
 
 <footer class="nnc-footer-bottom pt-3 pb-3">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="col-12 d-flex align-items-center justify-content-center nnc-footer-bottom_block">
                 <div class="site-info">
 
                     <?php
