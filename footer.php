@@ -62,7 +62,7 @@
                     $output = '<span>';
                     $output .= '&copy;';
                     $output .= esc_html__(' Copyright ', 'cherry-biz');
-                    $output .= date_i18n( __( 'Y' , 'cherry-biz' ) ) . ' ';
+                    $output .= date_i18n('Y') . ' ';
                     $output .= '<a href="'.esc_url( home_url( '/' )).'">';
                     $output .= esc_html(get_bloginfo('name', 'display'));
                     $output .= '</a>.';

@@ -7,7 +7,7 @@ $cherry_biz_testimonials_checkbox = get_theme_mod('cherry_biz_testimonials_check
 if($cherry_biz_testimonials_checkbox) :
 ?>
     <section class="nnc-testimonial nnc-testimonial--overlay nnc-s-padd"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/testimonial-bg.jpg');">
+             style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/testimonial-bg.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-12">

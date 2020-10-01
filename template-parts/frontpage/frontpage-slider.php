@@ -39,6 +39,6 @@ if($cherry_biz_our_slider_checkbox) :
         </div>
         <div class="swiper-pagination-hero d-none d-md-block"></div>
     </div>
-    <div class="nnc-hero--bg"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-curved.png"></div>
+    <div class="nnc-hero--bg"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/bg-curved.png"></div>
 </section>
 <?php endif; ?>
