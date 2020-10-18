@@ -35,7 +35,7 @@ function cherry_biz_customize_register($wp_customize)
     $wp_customize->add_panel( 'cherry_biz_front_page_options', array(
         'capabitity'         =>  'edit_theme_options',
         'priority'           =>  2,
-        'title'              =>  esc_html__('Front Page Options', 'cherry-biz')
+        'title'              =>  esc_html__('Homepage Options', 'cherry-biz')
     ) );
 
     /**
