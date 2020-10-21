@@ -75,7 +75,7 @@ if ( function_exists( 'wp_body_open' ) ) {
                                 <nav id="site-navigation" class="main-navigation">
                                     <?php
                                         wp_nav_menu([
-                                            'theme_location' => 'menu-1',
+                                            'theme_location' => 'primary',
                                             'menu_id' => 'primary-menu',
                                         ]);
                                     ?>
