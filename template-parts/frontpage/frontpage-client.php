@@ -3,7 +3,7 @@ $cherry_biz_clients_checkbox = get_theme_mod('cherry_biz_clients_checkbox');
 if($cherry_biz_clients_checkbox) :
 ?>
 
-<section class="nnc-oc bg-white nnc-s-padd">
+<section class="nnc-oc bg-white">
     <div class="container">
         <div class="row">
             <div class="col-12">
