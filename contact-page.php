@@ -31,7 +31,7 @@ get_header();
                                 <?php endwhile; ?>
                                 <?php
                                     if(!empty($cherry_biz_contact_shortcode)):
-                                        echo do_shortcode(esc_html($cherry_biz_contact_shortcode));
+                                        echo do_shortcode($cherry_biz_contact_shortcode);
                                     endif;
                                 ?>
                             </div>
