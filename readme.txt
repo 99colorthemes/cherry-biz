@@ -54,6 +54,8 @@ Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be u
     (License: CC0 - https://stocksnap.io/license)
 2. https://stocksnap.io/photo/ZU3GBGBBQP - By Kristin Hardwick
     (License: CC0 - https://stocksnap.io/license)
+3. https://stocksnap.io/photo/thanksgiving-background-BKNJSBTG7F - By Seacoast Sage
+    (License: CC0 - https://stocksnap.io/license)
 
 == Plugins ==
 1. TGM-Plugin-Activation: - https://github.com/TGMPA/TGM-Plugin-Activation

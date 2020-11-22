@@ -940,6 +940,14 @@ body.touch-enabled .main-navigation ul ul li.menu-item-has-children > a {
 --------------------------------------------------------------*/
 .comment-content a {
     word-wrap: break-word;
+    text-decoration: underline;
+    color: #333;
+}
+
+.comment-content a:hover {
+    text-decoration: underline;
+    color: #fb2056;
+
 }
 
 .bypostauthor {
