@@ -8,7 +8,7 @@
  * @package cherry-biz
  */
 
-$cherry_biz_contact_map = get_theme_mod('cherry_biz_contact_map');
+
 $cherry_biz_contact_shortcode = get_theme_mod('cherry_biz_contact_shortcode');
 
 get_header();
@@ -19,11 +19,6 @@ get_header();
                 <div class="col-lg-8 col-md-12 col-sm-12">
                     <div id="primary" class="content-area nnc-content-area">
                         <main id="main" class="site-main">
-                            <?php if(!empty($cherry_biz_contact_map)): ?>
-                                <div class="nnc-map">
-                                    <?php echo $cherry_biz_contact_map; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped?>
-                                </div>
-                            <?php endif; ?>
                             <div class="nnc-contact">
                                 <?php while ( have_posts() ) : the_post(); ?>
                                 <h2><?php the_title(); ?></h2>

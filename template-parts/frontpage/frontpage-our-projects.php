@@ -51,11 +51,10 @@ if($cherry_biz_projects_checkbox) :
                                         $tag_output = '';
                                         if($post_tags) {
                                             foreach ($post_tags as $key => $post_tag) {
-                                                $tag_output .= $post_tag->name;
-
-                                                if(count($post_tags) == ($key + 1)) {
+                                                if($key > 0) {
                                                     $tag_output .= ' / ';
                                                 }
+                                                $tag_output .= $post_tag->name;
                                             }
                                         }
 

@@ -48,10 +48,10 @@ if($cherry_biz_testimonials_checkbox) :
                                             $output = '';
                                             if($post_tags) {
                                                 foreach ($post_tags as $key => $post_tag) {
-                                                    $output .= $post_tag->name;
-                                                    if(count($post_tags) != ($key + 1)) {
+                                                    if($key > 0) {
                                                         $output .= ' / ';
                                                     }
+                                                    $output .= $post_tag->name;
                                                 }
                                             }
 

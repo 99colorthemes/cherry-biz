@@ -3,7 +3,7 @@ Contributors: 99colorthemes
 Tags: one-column, flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Tested up to: 5.4.1
 Requires PHP: 5.6
-Stable tag:  1.0.5
+Stable tag:  1.0.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 
@@ -36,14 +36,6 @@ Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be u
 3. Micromodal (https://github.com/ghosh/Micromodal)
    Licensed under MIT
 
-== Google Fonts ==
-1. Playfair Display (https://fonts.google.com/specimen/Playfair+Display)
-   Licensed under Open Font License
-   Copyright © Claus Eggers Sørense
-2. Roboto (https://fonts.google.com/specimen/Roboto)
-   Licensed under Open Font License
-   Copyright © Christian Robertson
-
 == Fonts ==
 1. Font Awesome: - http://fontawesome.io/
    Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -58,10 +50,17 @@ Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be u
     (License: CC0 - https://stocksnap.io/license)
 
 == Plugins ==
-1. TGM-Plugin-Activation: - https://github.com/TGMPA/TGM-Plugin-Activation
-   Licensed under the GNU General Public License v2.0
+1. TGM-Plugin-Activation:
+   Author: Thomas Griffin (thomasgriffinmedia.com)
+   URL:  https://github.com/TGMPA/TGM-Plugin-Activation
+   License: GNU General Public License, version 2
 
 == CHANGE LOG ==
+
+= Version 1.0.6 =
+* Design Fixes
+* Bug Fixes
+* Links within content is underlined
 
 = Version 1.0.5 =
 * Bug Fixes

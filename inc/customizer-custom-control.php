@@ -20,7 +20,7 @@ class Cherry_Biz_Customize_Heading extends WP_Customize_Control {
 /**
  * A class to create a title separater for all fields to separate
  */
-class Cherry_Biz_Customize_title extends WP_Customize_Control {
+class Cherry_Biz_Customize_Title extends WP_Customize_Control {
 
     public function render_content() {
         if ( !empty( $this->label ) ) : ?>
@@ -63,7 +63,7 @@ class Cherry_Biz_Category_Dropdown_Custom_Control extends WP_Customize_Control {
 
                     <?php
                     foreach ( $this->cats as $cat ) {
-                        printf('<option value="%s" %s>%s</option>', esc_html($cat->term_id), selected($this->value(), esc_html($cat->term_id), false), esc_html($cat->name));
+                        printf('<option value="%s" %s>%s</option>', esc_attr($cat->term_id), selected($this->value(), intval($cat->term_id), false), esc_html($cat->name));
                     }
                     ?>
 

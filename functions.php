@@ -179,6 +179,8 @@ function cherry_biz_scripts()
 {
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css');
 
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700|Roboto:300,400,500,700&display=swap');
+
     wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/all.css');
 
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper.css');
@@ -246,8 +248,8 @@ if ( ! function_exists( 'cherry_biz_register_recommended_plugins' ) ) :
     function cherry_biz_register_recommended_plugins() {
         $plugins = array(
             array(
-                'name'     => esc_html__( 'One Click Demo Importer', 'cherry-biz' ),
-                'slug'     => 'one-click-demo-import',
+                'name'     => esc_html__( 'Flash Demo Import', 'cherry-biz' ),
+                'slug'     => 'flash-demo-import',
                 'required' => false,
             ),
         );

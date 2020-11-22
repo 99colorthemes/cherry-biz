@@ -40,7 +40,7 @@ for ($counter = 0; $counter < cherry_biz_config('slider_limit'); $counter++) {
         'sanitize_callback'	     =>  'cherry_biz_sanitize_text'
     ) );
 
-    $wp_customize->add_control( new Cherry_Biz_Customize_title( $wp_customize, 'cherry_biz_slider_heading_title_'.$counter, array(
+    $wp_customize->add_control( new Cherry_Biz_Customize_Title( $wp_customize, 'cherry_biz_slider_heading_title_'.$counter, array(
         'settings'		        => 'cherry_biz_slider_heading_title_'.$counter,
         'section'		        => 'cherry_biz_slider_section',
         'label'			        => esc_html__( 'Slider', 'cherry-biz' ).' '.($counter +1)

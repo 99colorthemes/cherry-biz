@@ -23,30 +23,3 @@ if (!function_exists('cherry_biz_config')) :
     }
 
 endif;
-
-if (!function_exists('cherry_biz_map_allowed_tags')) :
-
-    function cherry_biz_map_allowed_tags( $cherry_biz_allowedposttags ) {
-
-        // Here add tags and attributes you want to allow
-        $cherry_biz_allowedposttags['iframe']=array(
-
-            'align'        => true,
-            'width'        => true,
-            'height'       => true,
-            'frameborder'  => true,
-            'name'         => true,
-            'src'          => true,
-            'id'           => true,
-            'class'        => true,
-            'style'        => true,
-            'scrolling'    => true,
-            'marginwidth'  => true,
-            'marginheight' => true,
-
-        );
-        return $cherry_biz_allowedposttags;
-
-    }
-
-endif;
