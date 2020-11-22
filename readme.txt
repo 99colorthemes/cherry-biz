@@ -3,7 +3,7 @@ Contributors: 99colorthemes
 Tags: one-column, flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Tested up to: 5.4.1
 Requires PHP: 5.6
-Stable tag:  1.0.4
+Stable tag:  1.0.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 
@@ -62,6 +62,9 @@ Cherry Biz is modern style, Multi-purpose Corporate WordPress Theme. It can be u
    Licensed under the GNU General Public License v2.0
 
 == CHANGE LOG ==
+
+= Version 1.0.5 =
+* Bug Fixes
 
 = Version 1.0.4 =
 * Bug Fixes
